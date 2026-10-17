@@ -36,4 +36,3 @@ An agent drafts the catalogue from the spec and checks the code for events that 
 ## Example
 
 - Wellness Coach: the north star is read from the app's own logs. Nudges are decided by rules and numbers are computed by code, so the AI writes words and never produces a figure.
-- Sparktale: the paid-acquisition plan names three measures before any spend: the cost of each book created, the cost of each paid download, and conversion compared with unpaid traffic.

@@ -42,14 +42,12 @@ Inside `scaffold/`:
   mv README.md.template README.md
   mv SOUL.md.template SOUL.md
   git init
-  git config user.name "Your Name"
-  git config user.email you@example.com
   git add -A
   git commit -m "Initial second brain"
 )
 ```
 
-Replace the name and email before running. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
+Set your git name and email if you have not. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
 
 [`SETUP.md`](SETUP.md) walks the rest in 10 minutes. Make the repository private before the first
 push, and read [`REDACTION.md`](REDACTION.md) before you consider anything else.
@@ -63,8 +61,7 @@ push, and read [`REDACTION.md`](REDACTION.md) before you consider anything else.
 
 ## What decides whether it lasts
 
-Folder structure matters little, because almost any consistent one works. What decides the outcome
-is whether anything ever leaves. Notes accumulate by default and nothing removes them by default, so
+Notes accumulate by default and nothing removes them by default, so
 a repo with no sweep gets slower to search every week. `/weekly-review` and `/archive-sweep` are the
 load-bearing parts of the template.
 

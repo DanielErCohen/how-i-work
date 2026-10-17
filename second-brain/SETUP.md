@@ -25,14 +25,12 @@ A working vault in 10 minutes, then a first week that gets the repo past the emp
   mv README.md.template README.md
   mv SOUL.md.template SOUL.md
   git init
-  git config user.name "Your Name"
-  git config user.email you@example.com
   git add -A
   git commit -m "Initial second brain"
 )
 ```
 
-Replace the name and email before running. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
+Set your git name and email if you have not. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
 
 **Minutes 2 to 4: fill in `.claude/CLAUDE.md`.** Replace the two language placeholders. Then read the
 section "Do not enumerate active work in this file" and the section "Two rules for every file". Keep

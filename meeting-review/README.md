@@ -30,7 +30,7 @@ Time: 15 minutes, most of it the export.
    ```bash
    [ -d ~/how-i-work ] || git clone https://github.com/DanielErCohen/how-i-work.git ~/how-i-work
    mkdir -p ~/.claude/skills
-   cp -R ~/how-i-work/meeting-review ~/.claude/skills/
+   cp -Rn ~/how-i-work/meeting-review ~/.claude/skills/
    ```
 4. **Run it.** In Claude Code, say `Use the meeting-review skill on ~/meeting-transcripts`. It asks which speaker labels are you and whether you want the PM view, the team-lead view or both. With more than 10 meetings it starts fast-model subagents to read the batches. The main model writes the review. Before it writes, it checks every quote against its source file with an exact-text search, drops any that do not match and reports how many it dropped. It saves the review next to the folder as `meeting-review-<date>.md`.
 5. **Clean up.** Delete the transcript folder, which also holds `_review-notes/`. The review stays.
@@ -38,7 +38,7 @@ Time: 15 minutes, most of it the export.
 ## Where it works
 
 - **Claude Code:** the full version. It reads the folder, runs subagents for the batches and saves the review as a file.
-- **Claude app (desktop and web):** download [meeting-review.zip](https://danielercohen.github.io/ai-pm/downloads/meeting-review.zip). Open Customize, then Skills, select "+", then "Create skill", then "Upload a skill", and choose the zip. Code execution must be on (Settings, then Capabilities; it is on by default, and on Team and Enterprise plans an admin turns it on). Then attach your transcripts in a chat. There are no subagents, so Claude reads the batches itself. A chat holds a limited amount of text, so the number of transcripts that fit depends on their length. When Claude says the files do not fit, run one chat per month, ask each for its batch notes, and bring the notes to a last chat for the review.
+- **Claude app (desktop and web):** download [meeting-review.zip](https://danielercohen.github.io/ai-pm/downloads/meeting-review.zip). Uploading a custom skill needs a paid Claude plan. Open Customize, then Skills, select "+", then "Create skill", then "Upload a skill", and choose the zip. Code execution must be on (Settings, then Capabilities; it is on by default, and on Team and Enterprise plans an admin turns it on). Then attach your transcripts in a chat. There are no subagents, so Claude reads the batches itself. A chat holds a limited amount of text, so the number of transcripts that fit depends on their length. When Claude says the files do not fit, run one chat per month, ask each for its batch notes, and bring the notes to a last chat for the review.
 
 The ready zip is on the site: https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html. To build it yourself, run `bash tools/build-skill-zips.sh` in the [ai-pm](https://github.com/DanielErCohen/ai-pm) repo. A plain `zip` of the folder does not work, because the Claude app rejects some frontmatter keys that the script removes.
 
@@ -50,12 +50,12 @@ Transcripts hold your colleagues' words and personal data.
 - Keep the export local, in a folder that no shared drive or sync service picks up. The skill reads only the folder you name and searches nothing. The text still reaches the model provider you use with Claude, so the policy check covers that too.
 - Delete the export and `_review-notes/` when you have the review.
 - The review describes you only. It quotes only your words, names colleagues by role, and skips candidate interviews and pay or performance conversations unless you say otherwise.
-- The review quotes your meetings and may carry company details. Read it before you share it.
+- The review and the batch notes stay local, next to the transcripts. The review quotes your meetings and may carry company details. Read it before you share it.
 
-## Why I use it
+## Why it works
 
-I built this method on my own meeting notes. I wanted to see how I work as a product team lead and as a PM in my own dated words, instead of from my memory of how the meetings went. A transcript holds every decision deferred, every follow-up promised and every question answered, with a date next to each. The review lines them up and counts them. It gives me habits I can count and three experiments, each with a number to check against the next month's transcripts.
+A transcript holds every decision deferred, every follow-up promised and every question answered, with a date next to each. The review lines them up and counts them. You get habits you can count and three experiments, each with a number to check against next month's transcripts.
 
 ## Where it came from
 
-I built the method on my own transcripts first. This version is rewritten from scratch as a general skill. It carries no company material, no transcripts and none of my own findings. The licence is MIT, like the rest of this repo.
+Built as a general method. Test it on your own transcripts. It carries no company material and no transcripts. The licence is MIT, like the rest of this repo.

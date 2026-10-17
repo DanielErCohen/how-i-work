@@ -17,7 +17,7 @@ Short branches, squash merges, and a link from every PR to its issue.
 - Keep branches short-lived, one issue each.
 - Squash-merge with `Closes #N` in the PR description.
 - Run the release note past a recipient panel (product preset) with [`skills/recipient-panel`](../skills/recipient-panel/SKILL.md): simulated users from the target segment read it cold and say what they think changed, what they would do next, and the line where they stop reading.
-- Agents merge a PR when CI is green and a separate review agent has signed it off. Anything that touches money, user data, outgoing messages or cannot be undone waits for me.
+- I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them. Anything that touches money, user data, outgoing messages or cannot be undone waits for me.
 
 ## The artifact
 

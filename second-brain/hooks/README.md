@@ -12,7 +12,7 @@ Claude's context. A failed pull shows one line to you.
 
 ```bash
 mkdir -p ~/.claude/hooks
-cp ~/how-i-work/claude/hooks/notes-repo-pull.sh ~/.claude/hooks/ && chmod +x ~/.claude/hooks/notes-repo-pull.sh
+cp -n ~/how-i-work/claude/hooks/notes-repo-pull.sh ~/.claude/hooks/ && chmod +x ~/.claude/hooks/notes-repo-pull.sh
 export NOTES_REPO=~/my-second-brain   # put this line in your shell profile
 ```
 
@@ -49,5 +49,5 @@ Inside the vault, Claude Code finds `.claude/commands/` and `.claude/skills/` by
 `log-entry` in every project, copy it once:
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R ~/my-second-brain/.claude/skills/log-entry ~/.claude/skills/
+mkdir -p ~/.claude/skills && cp -Rn ~/my-second-brain/.claude/skills/log-entry ~/.claude/skills/
 ```

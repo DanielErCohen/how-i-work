@@ -42,11 +42,10 @@ prevents almost every real case.
 ### Scan on a schedule
 
 ```bash
-git grep -nIE '(sk-[A-Za-z0-9_-]{16,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)'
+git grep -lIE '(^|[^A-Za-z0-9])sk-[A-Za-z0-9_-]{16,}|sk_live_[0-9A-Za-z]{16,}|gh[opsu]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|(AKIA|ASIA)[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{30,}|eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.|ntn_[0-9A-Za-z]{20,}|[a-z]+://[^/[:space:]:@]+:[^/[:space:]@]+@|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----'
 ```
 
-Add `$(git rev-list --all)` after `git grep -nIE '<pattern>'` to search all history rather than just
-the current tree.
+`-l` prints paths only, so the scan never shows a secret. Add `$(git rev-list --all)` after the pattern to search all history rather than just the current tree; each hit then reads `revision:path`.
 
 Report and fix by **path and credential kind**. Echoing a secret into a terminal,
 a log, or a chat transcript is a second exposure. The `/weekly-review` command in the scaffold follows
@@ -114,17 +113,21 @@ Two things worth doing on day one, while the repo is small.
 `credentials.json`, `service-account*.json`, and `.claude.json` (which can carry session history and
 tokens). Do not trim it.
 
-**Add a pre-commit hook.** Cheap, and catches the pasted-transcript case at the moment it happens:
+**Add a pre-commit hook.** Cheap, and catches the pasted-transcript case at the moment it happens. The block leaves an existing hook alone:
 
 ```bash
-cat > .git/hooks/pre-commit <<'EOF'
+if [ -e .git/hooks/pre-commit ]; then
+  echo "A pre-commit hook already exists. Add the check below to it by hand."
+else
+  cat > .git/hooks/pre-commit <<'EOF'
 #!/bin/sh
-if git diff --cached -U0 | grep -nIE '^\+.*(sk-[A-Za-z0-9_-]{16,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' >/dev/null; then
-  echo "pre-commit: possible credential in staged changes. Review, then commit with --no-verify if it is a false positive."
+if git diff --cached -U0 | grep -qE '^\+.*((^|[^A-Za-z0-9])sk-[A-Za-z0-9_-]{16,}|sk_live_[0-9A-Za-z]{16,}|gh[opsu]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|(AKIA|ASIA)[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{30,}|eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.|ntn_[0-9A-Za-z]{20,}|[a-z]+://[^/[:space:]:@]+:[^/[:space:]@]+@|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)'; then
+  echo "pre-commit: possible credential in staged changes. Check what the value is. Only if it is a false positive, commit with --no-verify."
   exit 1
 fi
 EOF
-chmod +x .git/hooks/pre-commit
+  chmod +x .git/hooks/pre-commit
+fi
 ```
 
 It prints no matched text, only that something matched. Note that hooks are local and not versioned.

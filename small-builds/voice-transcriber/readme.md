@@ -104,6 +104,8 @@ type: voice-note
 <transcribed text here>
 ```
 
+A title with no Latin letters gets a time-based name. A note never overwrites an existing file: a second note with the same name gets `-2`, then `-3`.
+
 From the inbox, move notes to the appropriate PARA folder as part of your regular review.
 
 ---

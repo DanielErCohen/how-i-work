@@ -37,7 +37,7 @@ Run lint and tests before opening a PR.
 ## Working rules for Claude
 
 - Work in your own git worktree, one lane per agent.
-- Open a pull request. A separate review agent reviews it. Agents merge a PR when CI is green and that review agent has signed it off.
+- Open a pull request. A separate review agent reviews it. <owner> signs off before release.
 - Fill in the PR template, including "Fit with the product doc".
 - Do not read or print `.env` files or secrets.
 - On any GitHub 403, 429 or secondary rate limit, stop all git and gh work and show the exact error to <owner>.

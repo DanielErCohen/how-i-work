@@ -38,4 +38,4 @@ Claude drafts the record from the discussion and finds the strongest counter wit
 ## Example
 
 - Wellness Coach: six beliefs, each with a "wrong if" threshold. The product stops if, at the 6- or 12-month check, target users do not open it daily or no friend keeps using it.
-- Sparktale: the paid-acquisition plan has a written kill test, 8 weeks, with stop thresholds on the cost of each book created, the cost of each paid download and conversion compared with unpaid traffic. As of Oct '26 the test has not started.
+- Sparktale: I wrote a kill test before spending.

@@ -46,7 +46,7 @@ directories missing from their index, and index entries pointing at directories 
 git ls-files --cached --ignored --exclude-standard
 git ls-files | grep -iE '\.(env|pem|key|p12)$|\.DS_Store$'
 git ls-files | grep -E ' [0-9]+(\.|$)'
-git grep -nIE '(sk-[A-Za-z0-9_-]{16,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' -- . 2>/dev/null
+git grep -lIE '(^|[^A-Za-z0-9])sk-[A-Za-z0-9_-]{16,}|sk_live_[0-9A-Za-z]{16,}|gh[opsu]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|(AKIA|ASIA)[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{30,}|eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.|ntn_[0-9A-Za-z]{20,}|[a-z]+://[^/[:space:]:@]+:[^/[:space:]@]+@|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----' -- . 2>/dev/null
 ```
 
 The first command lists files tracked *despite* matching `.gitignore`. A rule added after the first
@@ -55,7 +55,7 @@ committed. Fix with `git rm -r --cached <path>`.
 
 The third catches sync-tool duplicates such as `note 2.md`.
 
-If a credential matches: **report the path and the kind of credential, and leave the value out of the report.** State clearly
+The last command prints paths only. If a credential matches: **report the path and the kind of credential, and leave the value out of the report.** State clearly
 that rotation comes first, because `git rm` does not remove the value from history. Check for false
 positives before proposing rotation - OAuth client IDs, publishable payment keys, and analytics IDs are
 public by design.

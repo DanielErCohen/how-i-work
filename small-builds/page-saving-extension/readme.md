@@ -107,7 +107,7 @@ The extension auto-detects the page type and shows it in the popup:
 
 ### GitHub
 
-Files go to: `02-areas/saved-articles/{category}/`
+Files go to `00-inbox/` in each repo, with the category in the note's frontmatter. Run `/capture` in your second brain to file them.
 
 | Type | Filename prefix | Example |
 |---|---|---|
@@ -147,7 +147,7 @@ Pages appear in your "Saved Articles" database with:
 
 ## Privacy
 
-- Your API keys are stored **locally in your browser**. No server holds them
+- Your API keys and tokens are stored in `chrome.storage.local`, in plain text, in your browser profile. No server holds them. Use a fine-grained GitHub token limited to the one capture repo, with Contents set to read and write
 - The extension only sends your page content to the AI provider you chose and your chosen destinations
 - No data is saved anywhere else
 

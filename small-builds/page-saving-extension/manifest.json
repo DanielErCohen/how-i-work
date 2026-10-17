@@ -6,15 +6,12 @@
   "permissions": [
     "activeTab",
     "scripting",
-    "storage",
-    "alarms",
-    "tabs"
+    "storage"
   ],
   "host_permissions": [
     "https://api.anthropic.com/*",
     "https://api.github.com/*",
-    "https://api.notion.com/*",
-    "https://*.youtube.com/*"
+    "https://api.notion.com/*"
   ],
   "optional_host_permissions": [
     "https://*/*",

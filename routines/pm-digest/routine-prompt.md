@@ -45,17 +45,17 @@ Each item: a title up to 8 words, one fact sentence up to 30 words, then the sou
 
 ## 5. Product sense drill
 
-Curriculum (topics 3 to 9 cover the product operating model and product management for creative work; swap in the talks and books you follow):
+Curriculum (swap in the talks and books you follow):
 
 1 Problem framing (jobs to be done, 5 whys)
 2 Continuous discovery and opportunity solution trees (Teresa Torres)
-3 Product kata (from Rother's Toyota Kata): understand the direction, analyse the current state, set the next measurable goal, run the cheapest experiment toward it, loop
-4 Strategy cascade: company vision, strategic intents shared across the leadership team, portfolio strategy, product initiatives, options owned by teams; why a long list of AI projects is no AI strategy
-5 Product operating model: practices, structure, strategy, insights, culture; AI is a load test that shows which part breaks
-6 Governance that rewards learning: solution classification (for example experiment, alpha, beta, GA) with what sales may say at each stage; cadences that move from "what will you deliver" to "what did you learn"
+3 Product kata: understand the direction, analyse the current state, set the next measurable goal, run the cheapest experiment, loop
+4 Strategy cascade: vision, strategic intents, portfolio strategy, product initiatives
+5 Product operating model: practices, structure, strategy, insights, culture
+6 Governance that rewards learning: solution classification (for example experiment, alpha, beta, GA); cadences that move from "what will you deliver" to "what did you learn"
 7 Planning for ambiguity: scope what you don't know, write down assumptions and key decisions, name the signal that triggers a stop-and-reassess, flag one-way doors early
-8 Guardrails and platform depth: constraints as the safe space that lets teams move fast; knowing the platform well enough to find a cheaper third option
-9 Commercial product management: draw the line from your work to the business goal, make your data decision-ready, judgement on what to build is the scarce skill once building is cheap
+8 Guardrails: constraints as the safe space that lets teams move fast
+9 Commercial product management: draw the line from your work to the business goal and make your data decision-ready
 10 Assumption mapping: value, usability, feasibility, viability risks (Marty Cagan)
 11 Metrics: north star, input metrics, diagnosing a metric drop
 12 Prioritisation under constraints: opportunity cost, RICE failure modes, saying no

@@ -28,7 +28,7 @@ A mid-tier model writes the code. The orchestrator, on the strongest model, plan
 
 ## Where I still check
 
-- I confirm every change to what the product does. The agents decide the rest.
+- I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them.
 - The map file in the code repo ([`CLAUDE.md`](../templates/code-repo/CLAUDE.md)) matches the repo. A stale map costs every session.
 - Anything irreversible waits for me: money, data deletion, messages to other people.
 

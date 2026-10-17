@@ -214,7 +214,7 @@ the file leaves the value in history, so **rotation comes first and editing seco
 
 The realistic way in is a pasted session: an API experiment, a setup transcript or a debugging log
 that seemed worth keeping. Read anything you paste for values first. Scan on a schedule instead of
-trusting recall. `/weekly-review` does this and reports the path and the kind of credential only.
+trusting recall, with `git grep -lIE` so only paths print. `/weekly-review` does this and reports the path and the kind of credential only.
 
 ---
 

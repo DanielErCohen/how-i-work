@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 MODEL_MAP = {
@@ -83,12 +83,18 @@ def to_markdown(result: dict, title: str, audio_filename: str) -> str:
 
 def save_note(markdown: str, title: str, output_dir: Path) -> Path:
     today = date.today().isoformat()
-    slug = slugify(title)
-    filename = f"{today}_{slug}.md"
+    slug = slugify(title) or datetime.now().strftime("note-%H%M%S")
     output_dir.mkdir(parents=True, exist_ok=True)
-    dest = output_dir / filename
-    dest.write_text(markdown, encoding="utf-8")
-    return dest
+    n = 1
+    while True:
+        suffix = "" if n == 1 else f"-{n}"
+        dest = output_dir / f"{today}_{slug}{suffix}.md"
+        try:
+            with open(dest, "x", encoding="utf-8") as f:
+                f.write(markdown)
+            return dest
+        except FileExistsError:
+            n += 1
 
 
 def main() -> None:

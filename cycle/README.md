@@ -21,15 +21,14 @@ The [workflow on the site](https://danielercohen.github.io/ai-pm/principles/cycl
 - Before something goes to other people (a decision record, a brief, a release note), a recipient panel reads it first: one subagent per reader role, each reporting where it stops reading and why. The method is in [`skills/recipient-panel`](../skills/recipient-panel/SKILL.md).
 - Step 4 is the checkpoint. Nothing reaches a spec without a decision record that names the strongest counter and the kill test.
 - Open questions carry a default. I use a stated default only where I have accepted the consequence of proceeding.
-- Claude orchestrates from the map file in each repo. I confirm every change to what the product does. The agents decide the rest.
-- Agents merge a PR when CI is green and a separate review agent has signed it off. Anything that touches money, user data, outgoing messages or cannot be undone waits for me.
+- Claude orchestrates from the map file in each repo. I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them. Anything that touches money, user data, outgoing messages or cannot be undone waits for me.
 
 ## Worked examples
 
-The guides draw on two products as of Oct '26, described without numbers I cannot show:
+The examples in the guides come from two products as of Oct '26:
 
 - Wellness Coach: a work-in-progress iPhone app that aims to keep one log of activity. Sprints, role agents, beliefs with thresholds.
-- Sparktale: a live app for personalised printed children's books. A knowledge-base repo for prose, a code repo for code-coupled docs, a partner developer leading engineering, and a written kill test before any paid acquisition.
+- Sparktale: a live app for personalised printed children's books. A knowledge-base repo for prose, a code repo for code-coupled docs, a partner developer leading engineering. I wrote a kill test before spending.
 
 Project write-ups: https://danielercohen.github.io/ai-pm
 

@@ -1,6 +1,6 @@
 # Hooks
 
-Hooks run on your machine, so they need Claude Code. Copy them to `~/.claude/hooks/`, run `chmod +x`, and register them in `settings.json` (see [`../settings.md`](../settings.md)).
+Hooks run on your machine, so they need Claude Code. Read the scripts before you install them. Copy them to `~/.claude/hooks/`, run `chmod +x`, and register them in `settings.json` (see [`../settings.md`](../settings.md)).
 
 ## notes-repo-pull.sh (SessionStart)
 

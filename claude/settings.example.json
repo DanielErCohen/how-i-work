@@ -16,12 +16,10 @@
       "Bash(ls *)",
       "Bash(npm test)",
       "Read",
-      "Edit",
-      "Write",
+      "Edit(./**)",
+      "Write(./**)",
       "Glob",
-      "Grep",
-      "WebFetch",
-      "WebSearch"
+      "Grep"
     ],
     "deny": [
       "Bash(rm -rf /)",
@@ -31,8 +29,11 @@
       "Bash(rm -rf $HOME)",
       "Bash(rm -rf $HOME/*)",
       "Bash(sudo rm *)",
-      "Bash(git push --force *)",
       "Bash(git push -f *)",
+      "Bash(git push --force*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * +*)",
+      "Bash(git push --force-with-lease*)",
       "Bash(git reset --hard)",
       "Bash(git reset --hard *)",
       "Bash(curl * | bash *)",
@@ -42,11 +43,13 @@
       "Bash(chmod -R 777 *)",
       "Bash(mkfs *)",
       "Bash(dd * of=/dev/*)",
-      "Read(//**/.env)",
-      "Read(//**/.env.local)",
-      "Read(//**/.env.*.local)",
-      "Read(//**/.env.production)",
-      "Read(//**/.env.development)"
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.config/gh/**)",
+      "Read(~/.npmrc)",
+      "Read(~/.netrc)",
+      "Read(//**/*.pem)",
+      "Read(//**/.env*)"
     ],
     "ask": [
       "Bash(gh repo delete *)",

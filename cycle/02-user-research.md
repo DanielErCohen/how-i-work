@@ -10,7 +10,7 @@ What do real people do, and where does the task fail?
 
 The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
 
-I talk to real users first. A recipient panel (product preset) of AI-played users from the exact target segment rehearses flows before real users see them. It is no evidence of demand.
+I talk to real users first. A recipient panel (product preset) of AI-played users from the exact target segment rehearses flows before real users see them.
 
 ## What I do
 
@@ -30,7 +30,7 @@ The panel makes the first usability pass cheap, so I spend real interview time o
 
 ## Where I still check
 
-- Panel personas say what a model thinks a user would do. They are never evidence of demand, and every fact a persona states gets checked.
+- Panel personas say what a model thinks a user would do. Demand evidence comes from real interviews, and every fact a persona states gets checked.
 - Friends are biased evidence. I record who said what and mark friend feedback as such.
 
 ## Example

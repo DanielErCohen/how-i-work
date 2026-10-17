@@ -36,4 +36,3 @@ An agent pulls the figures, runs the validation checks and drafts the read. The 
 ## Example
 
 - Wellness Coach: the 6- and 12-month checks will ask whether target users open it daily and whether a friend keeps using it. Friends are biased evidence, and the read will say so.
-- Sparktale: the kill test reads the cost of each book created, the cost of each paid download and conversion compared with unpaid traffic at the end of the 8 weeks. As of Oct '26 the test has not started.

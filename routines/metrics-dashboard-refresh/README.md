@@ -36,4 +36,4 @@ The parser creates `dist/` if it is missing.
 
 ## Wire it to a schedule
 
-Write a skill or routine with these steps: download sources, run the parser, publish the data file if the exit code is 0, report. Keep file IDs, URLs and amounts in a private config file. The skill text holds none of them.
+Write a skill or routine with these steps: download sources, run the parser, publish the data file if the exit code is 0, report. Keep source locations in a private config file. The skill text holds none of them.
