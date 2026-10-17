@@ -1,0 +1,1 @@
+- [Confirm before filing](feedback-confirm-before-filing.md) - when the inbox item is ambiguous, ask once; never file it into a permanent folder on a guess

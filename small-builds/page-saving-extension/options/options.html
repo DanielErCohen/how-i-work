@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Second Brain - Settings</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      color: #1a1a1a;
+      background: #fafafa;
+      padding: 32px 24px 48px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 32px;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #555;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+
+    .field:last-child { margin-bottom: 0; }
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .field-hint {
+      font-size: 11px;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select {
+      padding: 8px 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 13px;
+      font-family: inherit;
+      color: #1a1a1a;
+      background: #fff;
+      transition: border-color 0.15s;
+      width: 100%;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 16px;
+    }
+
+    .radio-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    button {
+      padding: 9px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    #save-btn {
+      background: #6366f1;
+      color: #fff;
+    }
+
+    #save-btn:hover { background: #4f46e5; }
+
+    #test-btn, #test-llm-btn, #test-notion-btn {
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid #d1d5db;
+    }
+
+    #test-btn:hover, #test-llm-btn:hover, #test-notion-btn:hover { background: #e5e7eb; }
+
+    #test-result, #test-llm-result, #test-notion-result {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    .test-ok    { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    .test-error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+
+    #save-status {
+      font-size: 12px;
+      color: #16a34a;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>Second Brain Settings</h1>
+  <p class="subtitle">Configure your AI model, and GitHub and Notion destinations.</p>
+  <p class="subtitle" style="margin-top:-20px; margin-bottom:28px;">Version 2.2.0 · Last updated Oct '26 · Use any AI provider with an API key</p>
+
+  <form id="settings-form">
+
+    <!-- AI model -->
+    <div class="section">
+      <h2>AI model</h2>
+      <div class="field">
+        <label for="llmProvider">Provider</label>
+        <select id="llmProvider"></select>
+      </div>
+      <div class="field">
+        <label for="llmApiKey" id="llmApiKeyLabel">API key</label>
+        <p class="field-hint" id="llmKeyHelp"></p>
+        <input type="password" id="llmApiKey" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="llmModel">Model</label>
+        <p class="field-hint">Exact model ID as the provider names it. The default is only a starting point: check the provider's model list.</p>
+        <input type="text" id="llmModel" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="llmBaseUrl">API base URL</label>
+        <p class="field-hint">Filled in by the provider. Change it for a custom or self-hosted endpoint (for example <code>http://localhost:11434/v1</code> for Ollama).</p>
+        <input type="text" id="llmBaseUrl" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="llmFormat">API format</label>
+        <p class="field-hint"><code>OpenAI-compatible</code> calls <code>/chat/completions</code>; <code>Anthropic-compatible</code> calls <code>/v1/messages</code>.</p>
+        <select id="llmFormat">
+          <option value="openai">OpenAI-compatible</option>
+          <option value="anthropic">Anthropic-compatible</option>
+        </select>
+      </div>
+      <div class="actions">
+        <button type="button" id="test-llm-btn">Test model</button>
+        <span id="test-llm-result"></span>
+      </div>
+    </div>
+
+    <!-- GitHub -->
+    <div class="section">
+      <h2>GitHub</h2>
+      <div class="field">
+        <label for="githubToken">Personal Access Token</label>
+        <p class="field-hint">Use a fine-grained token scoped to one repo, with Contents set to read and write. Use a private repo: captures can include email threads. Create at github.com/settings/personal-access-tokens/new</p>
+        <input type="password" id="githubToken" placeholder="GitHub personal access token" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="githubOwner">GitHub Owner / Username</label>
+        <input type="text" id="githubOwner" placeholder="e.g. your-github-handle" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="githubRepo">Repository Name</label>
+        <input type="text" id="githubRepo" placeholder="e.g. your-notes-repo" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="githubBranch">Branch</label>
+        <input type="text" id="githubBranch" placeholder="main" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="githubRepos">Additional repositories</label>
+        <p class="field-hint">Save each capture to more than one repo. One per line as <code>owner/repo</code> or <code>owner/repo@branch</code> (branch defaults to the one above, then <code>main</code>). The same token must have access to each.</p>
+        <textarea id="githubRepos" rows="3" placeholder="your-handle/your-notes-repo&#10;your-handle/another-repo@main" autocomplete="off"></textarea>
+      </div>
+      <div class="actions">
+        <button type="button" id="test-btn">Test connection</button>
+        <span id="test-result"></span>
+      </div>
+    </div>
+
+    <!-- Notion -->
+    <div class="section">
+      <h2>Notion</h2>
+      <div class="field">
+        <label for="notionToken">Integration Token</label>
+        <p class="field-hint">Create an integration at <a href="https://www.notion.so/my-integrations" target="_blank">notion.so/my-integrations</a>, then share your database with it.</p>
+        <input type="password" id="notionToken" placeholder="secret_..." autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="notionDatabaseId">Database ID</label>
+        <p class="field-hint">From your database URL: notion.so/&lt;workspace&gt;/<strong>{database-id}</strong>?v=...</p>
+        <input type="text" id="notionDatabaseId" placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" autocomplete="off" />
+      </div>
+      <div class="actions">
+        <button type="button" id="test-notion-btn">Test connection</button>
+        <span id="test-notion-result"></span>
+      </div>
+    </div>
+
+    <!-- Default destination (only shown when both are configured) -->
+    <div class="section" id="default-destination-section" style="display:none">
+      <h2>Default Destination</h2>
+      <div class="field">
+        <div class="radio-group">
+          <label><input type="radio" name="defaultDestination" value="github" checked /> GitHub</label>
+          <label><input type="radio" name="defaultDestination" value="notion" /> Notion</label>
+        </div>
+        <p class="field-hint" style="margin-top:8px">The popup lets you tick any combination of repos and Notion. This sets which is pre-selected when only one is configured, and whether Notion is pre-ticked.</p>
+      </div>
+    </div>
+
+    <!-- Categories info -->
+    <div class="section">
+      <h2>Article Categories</h2>
+      <div class="field">
+        <p class="field-hint">
+          The model automatically picks one of these categories for each capture:<br>
+          <code>ai-llms</code> · <code>product</code> · <code>entrepreneurship</code> · <code>leadership</code> · <code>tools-tech</code> · <code>self-improvement</code> · <code>misc</code><br><br>
+          Articles land in <code>02-areas/saved-articles/{category}/</code> on your repo. No inbox - straight to the right place.
+        </p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" id="save-btn">Save settings</button>
+      <span id="save-status"></span>
+    </div>
+
+  </form>
+
+  <script src="../lib/llm.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

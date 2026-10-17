@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Second Brain Capture",
+  "version": "2.2.0",
+  "description": "Capture web content to one or more GitHub second brains (and Notion) via the AI model of your choice",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.anthropic.com/*",
+    "https://api.github.com/*",
+    "https://api.notion.com/*",
+    "https://*.youtube.com/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "secondbrain.png"
+  },
+  "icons": {
+    "16": "secondbrain.png",
+    "48": "secondbrain.png",
+    "128": "secondbrain.png"
+  },
+  "background": {
+    "service_worker": "background/service_worker.js"
+  },
+  "options_page": "options/options.html"
+}

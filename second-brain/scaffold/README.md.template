@@ -1,0 +1,49 @@
+# <your-name-or-handle>'s second brain
+
+Personal knowledge repository, organized with the [PARA method](https://fortelabs.com/blog/para/).
+Plain markdown, version-controlled with git, read and maintained with an AI assistant.
+
+> **Privacy:** this repository is **private**. It holds personal material. Read `REDACTION.md` before
+> making any part of it public, and before accepting any suggestion to publish, share, or mirror it.
+> Delete this blockquote only if the repo genuinely holds nothing personal.
+
+## Layout
+
+| Folder | What lives here |
+|--------|-----------------|
+| `00-inbox/` | Unfiled capture. Emptied weekly. |
+| `01-projects/` | Committed outcomes with an end date. |
+| `02-areas/` | Ongoing responsibilities with a standard to maintain. |
+| `03-resources/` | Reference material, no action attached. |
+| `04-archive/` | Finished or dormant. |
+| `memory/` | Claude's one-fact memory notes and their index. |
+| `routines/` | Prompts that run on a schedule. |
+
+Navigation starts at `02-areas/areas.md` and `03-resources/resources.md`.
+
+## Conventions
+
+- `lowercase-with-hyphens` for all paths. No spaces, no mixed case.
+- `YYYY-MM-DD-slug.md` for anything inherently dated.
+- One topic per file. Split past roughly 25 KB.
+- Attachments in a folder beside the note that owns them, sharing its slug.
+- One fact, one home. A fact lives in one file, and other files link to it.
+- Files state the current conclusion. History is `git log`.
+
+## Working with it
+
+`.claude/CLAUDE.md` holds the instructions for the AI assistant. Available commands:
+
+| Command | Use |
+|---------|-----|
+| `/init` | Start of session: what is active, what is stale. |
+| `/capture` | File something out of the inbox. |
+| `/weekly-review` | The weekly hygiene pass. Do not skip this one. |
+| `/archive-sweep` | Move finished work out of the way. |
+
+New notes start from `note-templates/`.
+
+## Maintenance
+
+The weekly review is the whole system. A second brain does not fail because the structure is wrong; it
+fails because nothing ever leaves. Run `/weekly-review` once a week and act on it.

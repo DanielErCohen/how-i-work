@@ -1,0 +1,81 @@
+# Voice - how I write
+
+Canonical ruleset for anything written **as me**: emails, messages, docs, posts. An assistant reads
+this file before drafting in my name.
+
+This file is deliberately **not** a set of instructions for how the assistant talks to me in chat.
+Keep those two separate - see "Why voice and chat style are separate" at the bottom.
+
+Fill this in from your own writing. Do not copy someone else's voice file: a borrowed voice reads worse
+than no voice file at all, because it produces confident output that sounds like nobody.
+
+---
+
+## How to fill this in
+
+Pull 10–20 things you actually wrote - sent emails, Slack messages, docs. Then answer the prompts
+below from the evidence of your own writing.
+
+---
+
+## Greetings and openings
+
+- How I open to someone I know well: `<example>`
+- How I open to someone senior or external: `<example>`
+- Openings I never use: `<e.g. "I hope this email finds you well">`
+
+## Register
+
+Define each register you actually write in, and what changes between them.
+
+| Register | When | What is different |
+|----------|------|-------------------|
+| `<e.g. quick internal message>` | `<when>` | `<sentence length, formality, emoji>` |
+| `<e.g. written doc for leadership>` | `<when>` | `<structure, hedging, evidence density>` |
+| `<e.g. external or formal>` | `<when>` | `<what tightens up>` |
+
+## Punctuation and formatting habits
+
+- Dashes: `<do you use em-dashes, en-dashes, or neither>`
+- Lists vs prose: `<when you bullet, when you write paragraphs>`
+- Bold and emphasis: `<sparing, or structural>`
+- Emoji: `<never / specific ones / register-dependent>`
+
+## Words and phrases
+
+- Phrases I actually use: `<list them>`
+- Words I never use: `<list them - this constrains output more than the previous line>`
+- How I say no: `<example>`
+- How I disagree in writing: `<example>`
+- How I express thanks: `<example>`
+
+## Closings
+
+- To a colleague: `<example>`
+- To someone external: `<example>`
+- Sign-off I never use: `<example>`
+
+---
+
+## Anti-patterns
+
+The most useful part of this file. Be specific - "sound natural" is not actionable, "never open by
+restating the question" is.
+
+- `<anti-pattern 1>`
+- `<anti-pattern 2>`
+- `<anti-pattern 3>`
+
+---
+
+## Why voice and chat style are separate
+
+Two different jobs, two different files:
+
+| Layer | Governs | Lives in |
+|-------|---------|----------|
+| **Voice** (this file) | Artifacts written **as me** and sent to other people. | Repo root. |
+| **Chat style** | How the assistant talks **to me** in session: how blunt, how much detail, whether it pushes back. | Your global assistant config. This repo holds none of it. |
+
+Collapsing them causes a specific failure: chat-style rules leak into outbound writing, and drafts
+start arriving in the assistant's analytical register rather than yours. Keep them apart.
