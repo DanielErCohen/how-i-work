@@ -1,6 +1,6 @@
 ---
 name: distill-to-gh-issue
-description: Turn one named item (QA finding, feature idea, bug report, Sentry or Supabase email, feedback row) into a GitHub issue in the current repo that an engineer can start on without further questions. Use when the user names something to file as an issue. Never files in an excluded org or repo.
+description: Turn one named item (QA finding, feature idea, bug report, Sentry or Supabase email, feedback row) into a GitHub issue in the current repo that an engineer can start on without further questions. Gathers context from the code, asks the user to settle what the item leaves open, then drafts. Use when the user names something to file as an issue. Never files in an excluded org or repo.
 argument-hint: [the item to file]
 ---
 
@@ -21,7 +21,13 @@ This skill needs the `gh` CLI and a local repo, so it runs in Claude Code only.
 - An unwired stub is a lead until you confirm it runs.
 - When the code contradicts the report, the issue says so.
 
-## 3. Draft the what; the how belongs to the implementer
+## 3. Distill with the user
+- After recon, ask the questions whose answers change the issue: who is affected, what they should be able to do, where the scope ends, and what signal shows it worked.
+- One question at a time, each with your proposed default, so the user can answer "yes" and move on.
+- Stop at five questions or when the answers stop changing the draft. Anything still open goes to Open questions.
+- Skip this step when the item already answers these, such as a bug report with steps, expected and actual behaviour.
+
+## 4. Draft the what; the how belongs to the implementer
 Title: a short imperative phrase. Body sections, one line where one line is enough:
 - Summary: 2-4 lines, leading with the most surprising recon finding.
 - Problem / user need: who, when, how painful, and the signal that shows it.
@@ -34,7 +40,7 @@ Title: a short imperative phrase. Body sections, one line where one line is enou
 
 A non-code prerequisite (an account, infra, a legal sign-off) gets its own short linked issue, created after the main one.
 
-## 4. Present, then create
+## 5. Present, then create
 - Show the destination `owner/name` on its own line (and whether the repo is public, since anchors and names in the body become world-readable), the full issue body, any near-duplicate, and one line of product challenge: the strongest counter or the thinnest assumption.
 - Pass the repo as a literal `owner/name`: each Bash call is a fresh shell, so a variable set earlier is empty and `gh` falls back to another remote.
   `gh issue create --repo <owner/name> --title "<title>" --body-file <scratchpad>/issue-body.md`

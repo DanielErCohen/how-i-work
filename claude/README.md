@@ -1,6 +1,18 @@
 # Claude Code setup
 
-Four rules carry most of the value. The setup in this folder enforces them where a setting, a hook or a permission can.
+Four rules and a setup you can copy: a global CLAUDE.md, settings, hooks, three agents and a memory format.
+
+<details>
+<summary><b>Why I built it:</b> My rules grew until Claude skipped some of them, so I rebuilt the setup from a blank page.</summary>
+
+- The instructions loaded at every session start dropped from about 11,100 to about 1,800 tokens (Sep '26).
+- Before the rebuild, some rules contradicted each other.
+- I clicked through permission prompts for routine reads and edits.
+- A rule now stays only if it answers a failure I saw twice.
+
+</details>
+
+The four rules carry most of the value. The setup in this folder enforces them where a setting, a hook or a permission can.
 
 ## The four rules
 

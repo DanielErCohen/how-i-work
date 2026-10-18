@@ -1,6 +1,17 @@
-# Second Brain Chrome Extension
+# Page-saving extension
 
-Capture web pages directly to one or more GitHub second brains (and/or a Notion database) with one click. The extension automatically identifies the page type, extracts content (including YouTube transcripts), and saves an AI-generated note in the right place - in every destination you tick.
+A Chrome extension that saves a web page or a podcast transcript from YouTube as an AI-written note in your second brain.
+
+<details>
+<summary><b>Why I built it:</b> Links I sent to my own WhatsApp inbox got read once and never found again, so I built a one-click path into my second brain.</summary>
+
+- It detects the page type and pulls transcripts from YouTube, which covers the podcasts I follow.
+- It writes an AI summary note and files it in a GitHub repo or a Notion database.
+- Only the pages I pick get saved, so the second brain holds the significant ones.
+
+</details>
+
+It saves with one click to one or more GitHub second brains, a Notion database or both, in every destination you tick. It identifies the page type and extracts the content, including YouTube transcripts.
 
 ---
 

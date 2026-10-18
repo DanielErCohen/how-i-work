@@ -1,6 +1,17 @@
 # PM digest
 
-A cloud routine that reads a curated set of product newsletters from my inbox twice a week and sends one short digest: 4 headlines, one product-sense drill, product news, tech, AI in PM, and a line on how to use it this week. A read takes about 4 minutes.
+Get your PM newsletters as one 4-minute digest, twice a week.
+
+<details>
+<summary><b>Why I built it:</b> I subscribed to 12 product newsletters and rarely read them, so a routine now reads them for me.</summary>
+
+- The digest arrives Monday and Thursday morning: 4 headlines, one product-sense drill from a 24-topic curriculum and one thing to use this week.
+- A cap on each section keeps a read to about 4 minutes.
+- The routine stores its state in the sent email's footer, so it needs no database.
+
+</details>
+
+It is a cloud routine that reads a curated set of product newsletters from my inbox and sends one short digest: 4 headlines, one product-sense drill, product news, tech, AI in PM and a line on how to use it this week.
 
 ## How it works
 

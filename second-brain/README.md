@@ -1,8 +1,19 @@
 # Second brain
 
-A git-backed folder of plain markdown that Claude reads at every session start, files new notes
-into and keeps in order. This is the empty template: the folder structure, the assistant layer, a
-memory format, a routine pattern and three worked examples.
+A git-backed folder of markdown that Claude reads at every session start, files notes into and keeps in order.
+
+<details>
+<summary><b>Why I built it:</b> I kept re-explaining my context and pasting notes into AI chats, so I moved my notes into a folder Claude reads first.</summary>
+
+- My second brain started in Notion, separate from the AI chats I worked in.
+- Projects in ChatGPT and Claude let me share saved information between chats. I still copied context in by hand.
+- After some months of coding, I moved it to markdown in git (Apr '26). Claude maps, stores and retrieves my notes with a single prompt.
+- Git gives search, history and a diff for every change Claude makes.
+- A weekly sweep archives what is done, because notes pile up and nothing removes them by default.
+
+</details>
+
+This is the empty template: the folder structure, the assistant layer, a memory format, a routine pattern and three worked examples.
 
 ## What you get
 

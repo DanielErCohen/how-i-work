@@ -1,6 +1,18 @@
 # Meeting review
 
-A Claude skill that reads a folder of your own meeting transcripts and returns one review of you as a product manager and team lead. Site page: https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html
+Get one review of how you work in meetings, from three months of your own transcripts and backed by your own dated quotes.
+
+<details>
+<summary><b>Why it works:</b> Few people read back the transcripts that record how they decide and follow up.</summary>
+
+- It counts decisions made versus deferred and follow-ups closed.
+- Every finding quotes your own words, with a date.
+- It ends with three habits to test next month, each with a count to check.
+- It never scores anyone else.
+
+</details>
+
+This is a Claude skill that reads a folder of your meeting transcripts and returns one review of you as a product manager and team lead. Site page: https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html
 
 ## What you get
 
@@ -51,10 +63,6 @@ Transcripts hold your colleagues' words and personal data.
 - Delete the export and `_review-notes/` when you have the review.
 - The review describes you only. It quotes only your words, names colleagues by role, and skips candidate interviews and pay or performance conversations unless you say otherwise.
 - The review and the batch notes stay local, next to the transcripts. The review quotes your meetings and may carry company details. Read it before you share it.
-
-## Why it works
-
-A transcript holds every decision deferred, every follow-up promised and every question answered, with a date next to each. The review lines them up and counts them. You get habits you can count and three experiments, each with a number to check against next month's transcripts.
 
 ## Where it came from
 
