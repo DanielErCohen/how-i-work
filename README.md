@@ -1,6 +1,6 @@
 # How I work
 
-PM tools I built for problems in my own work, free to copy and adapt.
+Product management tools I built and use, free to share and adapt.
 
 - Each tool has a page on the site with what it fixes, why I built it and how to set it up: https://danielercohen.github.io/ai-pm/toolkit/.
 - The repo holds tools for Claude Code and the Claude app, plus a nine-step workflow.
