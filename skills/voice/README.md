@@ -24,6 +24,8 @@ Your voice file is built from your private writing. Keep it in a private repo an
 
 ## Install
 
+Adapt the skill to you after installing: see [Make it yours](../../README.md#make-it-yours).
+
 **Claude Code.** Run `mkdir -p ~/.claude/skills`, copy this folder to `~/.claude/skills/voice/`, then copy `SOUL.template.md` to `~/.claude/skills/voice/SOUL.md` and fill it in.
 
 **Claude app (desktop and web).** Download [voice.zip](https://danielercohen.github.io/ai-pm/downloads/voice.zip) and upload it as it is: open Customize, then Skills, select "+", then "Create skill", then "Upload a skill", and choose the zip. Code execution must be on (Settings, then Capabilities; it is on by default, and on Team and Enterprise plans an admin turns it on). The zip holds no voice file, so in your first chat the skill asks you to paste your voice file, or to paste 20 to 30 items you sent and it builds one for that session. Save the file as `SOUL.md` if you want to reuse it.

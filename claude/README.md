@@ -70,6 +70,8 @@ Start with the map, then split the next task across agents.
 
 ## Install
 
+Adapt the setup to you after installing: see [Make it yours](../README.md#make-it-yours).
+
 Claude Code. Read the hook scripts before you install them: they run on your machine. This block works from any folder on a fresh Mac. It clones the repo if you do not have it, then copies the template, the three agents, the recipient-panel skill, the slop checker and the hooks. `cp -n` never overwrites a file you already have.
 
 ```bash

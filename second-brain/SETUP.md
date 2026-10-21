@@ -2,6 +2,8 @@
 
 A working vault in 10 minutes, then a first week that gets the repo past the empty-scaffold stall.
 
+Adapt the scaffold to you after the first setup: see [Make it yours](../README.md#make-it-yours).
+
 ## Prerequisites
 
 - `git`

@@ -6,6 +6,7 @@ Product management tools I built and use, free to share and adapt.
 - The repo holds tools for Claude Code and the Claude app, plus a nine-step workflow.
 - Every tool has a folder here except cv-tailor, which has its own repo.
 - AI widens what you look at and argues with your draft. You frame the problem, decide and sign off.
+- Each tool works best adapted to you: [Make it yours](#make-it-yours) has a prompt for your AI.
 
 ## Catalogue
 
@@ -78,6 +79,14 @@ The ready zips are on the site: https://danielercohen.github.io/ai-pm/toolkit/sk
 - A plain `zip` of the folder does not work, because the Claude app rejects some frontmatter keys that the script removes.
 
 Skills install both ways. Hooks, agents, `settings.json` and the scripts need Claude Code, because they run on your machine.
+
+## Make it yours
+
+A tool works best when it fits how you work. After you set one up, paste this into your AI to adapt it to your role, your tone and your tools:
+
+```text
+I set up [tool folder] from the how-i-work repo. Read it, then ask me three questions about my role, my tone and the tools I use. Wait for my answers, then adapt it to fit me and tell me what you changed and why.
+```
 
 ## Licence
 
