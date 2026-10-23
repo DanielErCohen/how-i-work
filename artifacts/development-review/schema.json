@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Development review starter v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mode",
+    "period",
+    "last_week",
+    "assessment",
+    "roadmap",
+    "achievements"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "mode": {
+      "enum": [
+        "synthetic",
+        "personal"
+      ]
+    },
+    "period": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "last_week": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "detail",
+          "evidence",
+          "limit"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "detail": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "limit": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        }
+      }
+    },
+    "assessment": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "detail",
+          "evidence",
+          "limit"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "detail": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "limit": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        }
+      }
+    },
+    "roadmap": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "detail",
+          "evidence",
+          "limit"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "detail": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "limit": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        }
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "detail",
+          "evidence",
+          "limit"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "detail": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "limit": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        }
+      }
+    }
+  }
+}

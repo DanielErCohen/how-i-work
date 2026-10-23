@@ -2,6 +2,10 @@
 
 This repo is MIT licensed (see `LICENSE`) except for the files below.
 
+## artifacts/development-review/starter.html
+
+The HTML bundles Source Serif 4 under the SIL Open Font License, Version 1.1. The font license is in [`artifacts/development-review/OFL.txt`](artifacts/development-review/OFL.txt) and must accompany copies of the starter.
+
 ## claude/scripts/slop-check.sh
 
 Adapted from petergyang/no-ai-slop (https://github.com/petergyang/no-ai-slop). The no-ai-slop license:
