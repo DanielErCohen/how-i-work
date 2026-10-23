@@ -88,6 +88,10 @@ A tool works best when it fits how you work. After you set one up, paste this in
 I set up [tool folder] from the how-i-work repo. Read it, then ask me three questions about my role, my tone and the tools I use. Wait for my answers, then adapt it to fit me and tell me what you changed and why.
 ```
 
+## Create an artifact
+
+Read [ARTIFACTS.md](ARTIFACTS.md) for source paths and recipes for turning a tool's output into an editable artifact with a preview, starter download and adaptation prompt. Public examples are synthetic; keep your own inputs in your private working copy. The [development review starter](artifacts/development-review/README.md) opens local JSON in four views and includes [agent instructions](artifacts/development-review/AGENTS.md).
+
 ## Licence
 
 MIT, copyright Daniel Cohen 2026, except the files listed in [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md). See [`LICENSE`](LICENSE).
