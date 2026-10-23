@@ -24,4 +24,3 @@ A checklist helps when each step is a task the user already wants to do. This in
 > "Every step you remove is one fewer place to quit."
 
 ### My notes
-
