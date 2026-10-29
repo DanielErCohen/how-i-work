@@ -20,7 +20,7 @@ Product management tools I built and use, free to share and adapt.
 | [Page-saving extension](https://danielercohen.github.io/ai-pm/toolkit/small-builds.html) | Save the pages and podcasts worth keeping to your notes in one click. | 15 to 20 minutes | [`small-builds/`](small-builds/README.md) |
 | [cv-tailor](https://danielercohen.github.io/ai-pm/toolkit/cv-tailor.html) | Improve your CV so it gets read, then tailor it to each role to get more callbacks. | 15 minutes | [cv-tailor repo](https://github.com/DanielErCohen/cv-tailor) |
 | [Decision record](https://danielercohen.github.io/ai-pm/toolkit/decision-record.html) | Write down a decision, its evidence and the test that would change it, so you can check it later. | Plain document | [`templates/decision-record.md`](templates/decision-record.md) |
-| [Development review](https://danielercohen.github.io/ai-pm/toolkit/development-review.html) | Use your weekly notes to review progress and choose a practice to try. | Local HTML starter | [`artifacts/development-review/`](artifacts/development-review/README.md) |
+| [Development review](https://danielercohen.github.io/ai-pm/toolkit/development-review.html) | Use your weekly notes to review progress and choose a practice to try. | Open one HTML file, no install | [`artifacts/development-review/`](artifacts/development-review/README.md) |
 
 ## How I use AI across product work
 
