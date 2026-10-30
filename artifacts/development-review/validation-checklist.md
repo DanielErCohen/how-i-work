@@ -3,7 +3,7 @@
 - [ ] The four tabs appear in the agreed order.
 - [ ] schema_version is 1; mode is personal; your review interval is explicit.
 - [ ] Every record has title, detail, evidence and limit; unknowns are stated.
-- [ ] All synthetic records were replaced or removed.
+- [ ] All made-up records were replaced or removed.
 - [ ] Observations, interpretations and pattern confidence are distinguishable.
 - [ ] Current assessments are preserved; proposed changes remain proposals.
 - [ ] A practice has a next opportunity and a check; acceptance is explicit.

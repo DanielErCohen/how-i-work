@@ -1,4 +1,4 @@
-# Synthetic saved-page example
+# Made-up saved-page example
 
 The article, team, quote and URL below are invented for this example. The URL is a placeholder.
 

@@ -91,7 +91,7 @@ I set up [tool folder] from the how-i-work repo. Read it, then ask me three ques
 
 ## Create an artifact
 
-Read [ARTIFACTS.md](ARTIFACTS.md) for source paths and recipes for turning a tool's output into an editable artifact with a preview, starter download and adaptation prompt. Public examples are synthetic; keep your own inputs in your private working copy. The [development review starter](artifacts/development-review/README.md) opens local JSON in four views and includes [agent instructions](artifacts/development-review/AGENTS.md).
+Read [ARTIFACTS.md](ARTIFACTS.md) for source paths and recipes for turning a tool's output into an editable artifact with a preview, starter download and adaptation prompt. Public examples are made up; keep your own inputs in your private working copy. The [development review starter](artifacts/development-review/README.md) opens local JSON in four views and includes [agent instructions](artifacts/development-review/AGENTS.md).
 
 ## Licence
 

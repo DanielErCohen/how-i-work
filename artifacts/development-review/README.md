@@ -3,7 +3,7 @@
 A local teaching starter for one personal review. No accounts, dependencies or installation. Compatible with modern desktop and mobile browsers that support local file selection. For routine editing, use a computer with a plain text editor. No skill is required.
 
 1. Unzip the pack and open starter.html in your browser. It starts empty.
-2. Open blank-data.json in a plain text editor. Copy the shape of a record from sample-data.json, replace every synthetic value with permitted notes, and save as my-review.json. Every record has title, detail, evidence and limit; enter explicit unknowns where needed. Optional: give an assistant the starter files and adaptation-prompt.txt with your context filled in.
+2. Open blank-data.json in a plain text editor. Copy the shape of a record from sample-data.json, replace every made-up value with permitted notes, and save as my-review.json. Every record has title, detail, evidence and limit; enter explicit unknowns where needed. Optional: give an assistant the starter files and adaptation-prompt.txt with your context filled in.
 3. Select Import my JSON in starter.html and choose my-review.json. The page rejects malformed data and keeps the previous view.
 4. Check all four tabs. Expand Evidence and limits. Use the checklist before treating anything as a conclusion.
 
@@ -43,7 +43,7 @@ This intentionally small display schema is not a source registry or an assessmen
 
 ## Data and privacy
 
-sample-data.json and the embedded example are wholly synthetic, created from scratch for this starter. No real individuals, employers, quotes, source links or business metrics are represented. No automatic fetches, network calls, analytics, storage or uploads are included. File import stays in browser memory. The schema URL identifies a standard and does not initiate a request. Sharing a filled JSON file reveals its contents; review and redact separately.
+sample-data.json and the embedded example are made up from scratch for this starter. No real individuals, employers, quotes, source links or business metrics are represented. No automatic fetches, network calls, analytics, storage or uploads are included. File import stays in browser memory. The schema URL identifies a standard and does not initiate a request. Sharing a filled JSON file reveals its contents; review and redact separately.
 
 The optional existing Meeting review skill is a separate analysis workflow. It is not included, connected or needed to open the starter. This pack is not a Claude skill ZIP.
 
