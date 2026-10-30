@@ -121,7 +121,7 @@ with a Why and a How to apply. Format in `memory/README.md`.
 | Command | What it does |
 |---------|--------------|
 | `/init` | Session-start brief: what is active, what changed, what is stale. |
-| `/capture` | File one item from `00-inbox/` into the right PARA bucket. |
+| `/capture` | File unsorted items from `00-inbox/` into the right PARA folder. |
 | `/weekly-review` | Empty the inbox, surface stale projects, check this file against reality. |
 | `/archive-sweep` | Find finished projects and dormant areas, propose archive moves. |
 

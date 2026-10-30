@@ -1,6 +1,6 @@
 # Test a clearer setting label
 
-Wholly fictional teaching example. The product, participants, observations and counts below were invented for this file.
+Made-up teaching example. The product, participants, observations and counts below were invented for this file.
 
 ## Position
 

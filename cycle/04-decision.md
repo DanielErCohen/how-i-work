@@ -8,8 +8,6 @@ What should we do with the evidence we have?
 | What I check | I choose the direction, name what would change my mind and set a review date. Missing evidence stays visible. |
 | Useful output | A decision, its rationale and a test that could change it. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 This is the checkpoint. A choice that changes what we build gets a one-page decision record before any spec.
 
 ## What I do

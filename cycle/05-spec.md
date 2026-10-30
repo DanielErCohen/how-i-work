@@ -8,8 +8,6 @@ What needs to change, and how will we know it is done?
 | What I check | I check that the scope serves the goal and that the completion criteria describe something a person can observe. |
 | Useful output | A scoped brief or issue with acceptance criteria and explicit open questions. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 A sprint is a folder with a goal, a done-when and one scope question. Specs split the work into lanes that do not touch the same files.
 
 ## What I do

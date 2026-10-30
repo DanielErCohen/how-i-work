@@ -77,7 +77,7 @@ For a product you test again and again, save each persona as a file, for example
 - Paste only what the user's employer allows. Remove names and customer details from the draft first.
 - Never send the draft, or anything from it, to a real person on the user's behalf. Sending stays with the user.
 
-Worked examples are at https://danielercohen.github.io/ai-pm/principles/.
+Prompts to copy are at https://danielercohen.github.io/ai-pm/principles/.
 
 ## Without subagents (a chat in the Claude app)
 

@@ -1,6 +1,6 @@
 # Voice skill
 
-A skill that writes in your voice, and the method for building the voice file from your own sent writing. Nothing here is mine: `SOUL.template.md` is a blank you fill with your own patterns.
+A skill that writes in your voice, and the method for building the voice file from your own sent writing. `SOUL.template.md` is a blank you fill with your own patterns.
 
 ## Files
 

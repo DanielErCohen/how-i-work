@@ -20,7 +20,7 @@ The skill reads your transcripts in date order, in batches. It then writes a rev
 
 A short sample of the output follows. Alex and every quote are invented. The full fictional review is in [`sample-output.md`](sample-output.md).
 
-> **Fictional sample.**
+> **Made-up sample.**
 >
 > **What to change: you defer without a date.** 12 of 31 decision points were deferred. 7 of the 12 had no date.
 >
@@ -66,4 +66,4 @@ Transcripts hold your colleagues' words and personal data.
 
 ## Where it came from
 
-Built as a general method. Test it on your own transcripts. It carries no company material and no transcripts. The licence is MIT, like the rest of this repo.
+Built as a general method. Test it on your own transcripts. It ships with no company material and no transcripts. The licence is MIT, like the rest of this repo.

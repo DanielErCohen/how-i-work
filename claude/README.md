@@ -12,7 +12,7 @@ Four rules and a setup you can copy: a global CLAUDE.md, settings, hooks, three 
 
 </details>
 
-The four rules carry most of the value. The setup in this folder enforces them where a setting, a hook or a permission can.
+The setup in this folder enforces the four rules below where a setting, a hook or a permission can.
 
 ## The four rules
 
@@ -87,6 +87,6 @@ chmod +x ~/.claude/scripts/slop-check.sh ~/.claude/hooks/*.sh
 
 Then replace each placeholder in angle brackets in `~/.claude/CLAUDE.md`. Back up your settings with `cp ~/.claude/settings.json ~/.claude/settings.json.bak-$(date +%F)` and merge the keys you want from `settings.example.json` into `~/.claude/settings.json`, which also registers the hooks.
 
-Claude Desktop and web: agents, hooks and settings need Claude Code. The skills in [`../skills/`](../skills) install as zip uploads.
+Claude app (desktop and web): agents, hooks and settings need Claude Code. The skills in [`../skills/`](../skills) install as zip uploads.
 
 The slop-check hook needs `jq`.

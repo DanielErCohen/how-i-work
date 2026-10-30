@@ -15,7 +15,7 @@ It saves with one click to one or more GitHub second brains, a Notion database o
 
 ---
 
-## Setup (5 minutes)
+## Setup (15 to 20 minutes)
 
 ### Install the extension
 
@@ -24,7 +24,7 @@ It saves with one click to one or more GitHub second brains, a Notion database o
 3. Click **Load unpacked** and choose the folder `how-i-work/small-builds/page-saving-extension`
 4. Pin the extension from the puzzle-piece menu so the icon stays visible
 
-### 1. Create a Notion Database (if using Notion)
+### 1. Create a Notion database (if using Notion)
 
 1. Open Notion and create a new database called "Saved Articles"
 2. Download the `notion-db-template.csv` file from this folder
@@ -36,17 +36,17 @@ It saves with one click to one or more GitHub second brains, a Notion database o
    - Look at the URL: `https://www.notion.so/<name>/<DATABASE-ID>?v=...`
    - Copy the long string (32 characters) - that's your database ID
 
-### 2. Create a Notion Integration (if using Notion)
+### 2. Create a Notion integration (if using Notion)
 
 1. Go to https://www.notion.so/my-integrations
 2. Click **+ New integration**
 3. Name it "Second Brain" (or anything you like)
-4. Copy the **Integration Token** (starts with `secret_...`)
+4. Copy the **Integration Token** (starts with `ntn_`; older tokens start with `secret_`)
 5. Go back to your "Saved Articles" database in Notion
 6. Click **⋮** → **Connections** → **Add connection**
 7. Find your integration and click to add it
 
-### 3. Get Your GitHub Details (if using GitHub)
+### 3. Get your GitHub details (if using GitHub)
 
 1. Create a **private** repo for your captures. Captures can include email threads, so use a private repo.
 2. Go to https://github.com/settings/personal-access-tokens/new to create a fine-grained token
@@ -74,21 +74,21 @@ Pick any provider; the extension talks to it directly with your key.
 
 Model IDs change often. Treat the default as a starting point and use **Test model** in Settings to confirm it works. Chrome asks once for permission to reach the provider's host when you save or test.
 
-### 5. Add Everything to Extension Settings
+### 5. Add everything to extension settings
 
 1. Click the extension icon in your browser
-2. Click the **⚙️** settings button
+2. Click **Settings** in the popup
 3. Fill in:
    - **AI model**: provider, API key, and model (from step 4). Base URL and API format fill in from the provider; edit them for a custom endpoint
    - **GitHub token, owner, repo** (from step 3) - and optionally more repos under **Additional repositories**
-   - **Notion token, database ID** (from steps 1–2) - optional
+   - **Notion token, database ID** (from steps 1 and 2) - optional
 4. When more than one destination is configured, the popup shows a checklist so you can pick exactly which repos (and Notion) each capture goes to. The **Default Destination** setting controls what's pre-ticked.
 
 ---
 
-## Using the Extension
+## Using the extension
 
-### Supported Page Types
+### Supported page types
 
 The extension auto-detects the page type and shows it in the popup:
 
@@ -100,7 +100,7 @@ The extension auto-detects the page type and shows it in the popup:
 | **YT** | YouTube video | Transcript auto-extracted, AI summary from PM perspective |
 | **Tool** | Tool / product website | AI exec summary: what it does, AI PM relevance, key features |
 
-### Saving a Page
+### Saving a page
 
 1. Open any article, YouTube video, tool website, or LinkedIn post
 2. Click the extension icon
@@ -109,7 +109,7 @@ The extension auto-detects the page type and shows it in the popup:
 5. If more than one destination is configured, tick every repo (and/or Notion) you want this saved to
 6. Click **Save to Second Brain**
 
-### What Happens Next
+### What happens next
 
 - The extension reads the page content (and extracts transcript for YouTube)
 - The AI model analyses it **once**, picks a category, and applies a type-appropriate template
@@ -158,12 +158,6 @@ Pages appear in your "Saved Articles" database with:
 
 ## Privacy
 
-- Your API keys and tokens are stored in `chrome.storage.local`, in plain text, in your browser profile. No server holds them. Use a fine-grained GitHub token limited to the one capture repo, with Contents set to read and write
+- Your API keys and tokens are stored in `chrome.storage.local`, in plain text, in your browser profile. No server holds them.
 - The extension only sends your page content to the AI provider you chose and your chosen destinations
 - No data is saved anywhere else
-
----
-
-## Questions?
-
-Check the extension settings page - there are helpful hints next to each field.

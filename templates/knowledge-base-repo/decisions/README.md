@@ -4,6 +4,8 @@ One page per decision that changes what we build. Never rewrite a record. A new 
 
 Name files `YYYY-MM-DD-name.md` and use [`_template.md`](_template.md).
 
+For a single decision outside a repo, use [templates/decision-record.md](../../decision-record.md).
+
 Keep a one-line index at the bottom of this file:
 
 ```

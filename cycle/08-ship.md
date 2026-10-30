@@ -8,8 +8,6 @@ Is this ready to reach users, and what still needs a decision?
 | What I check | I read the results and resolve remaining product decisions. Changes involving money, user data or outgoing messages need an explicit approval. |
 | Useful output | A release decision, a record of checks and a release note. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 Short branches, squash merges, and a link from every PR to its issue.
 
 ## What I do

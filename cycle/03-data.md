@@ -8,8 +8,6 @@ What change would show that the work helped?
 | What I check | I check the metric, population, date range and data source. I verify that the events are recorded before using the numbers. |
 | Useful output | A success measure, its definition and checks on the data. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 Before the first user, I decide what I will measure and where the number comes from.
 
 ## What I do

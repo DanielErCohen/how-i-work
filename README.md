@@ -4,7 +4,7 @@ Product management tools I built and use, free to share and adapt.
 
 - Each tool has a page on the site with what it fixes, why I built it and how to set it up: https://danielercohen.github.io/ai-pm/toolkit/.
 - The repo holds tools for Claude Code and the Claude app, plus a nine-step workflow.
-- Every tool has a folder here except cv-tailor, which has its own repo.
+- Every tool has a folder here except cv-tailor and Project start, which have their own repos.
 - AI widens what you look at and argues with your draft. You frame the problem, decide and sign off.
 - Each tool works best adapted to you: [Make it yours](#make-it-yours) has a prompt for your AI.
 
@@ -13,6 +13,7 @@ Product management tools I built and use, free to share and adapt.
 | Tool | What it fixes | Time to set up | Folder |
 |---|---|---|---|
 | [Claude Code setup](https://danielercohen.github.io/ai-pm/toolkit/claude.html) | Set up Claude Code so it follows your rules and loads less context at every session start. | 30 minutes | [`claude/`](claude/README.md) |
+| [Project start](https://danielercohen.github.io/ai-pm/toolkit/project-start.html) | Claude interviews you about a new project and writes down who decides, what waits on you and when to stop. | One interview | [project-start repo](https://github.com/DanielErCohen/project-start) |
 | [Skills](https://danielercohen.github.io/ai-pm/toolkit/skills.html) | Four skills: challenge a plan, test a doc on its readers, turn an idea or bug into an issue an engineer can start on and write in your own voice. | 2 to 20 minutes each | [`skills/`](skills) |
 | [Meeting review](https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html) | Find the habits to change in how you run meetings, from your own transcripts. | 15 minutes | [`meeting-review/`](meeting-review/README.md) |
 | [Routines](https://danielercohen.github.io/ai-pm/toolkit/routines.html) | Get your PM newsletters as one 4-minute digest, twice a week. | 30 to 45 minutes each | [`routines/`](routines) |

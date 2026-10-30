@@ -1,6 +1,6 @@
 # Meeting review: Alex, 2025-04-07 to 2025-06-27
 
-> **Fictional sample.** Alex, the team, the meetings and every quote below are invented to show the shape of the output. Nothing here comes from a real transcript.
+> **Made-up sample.** Alex, the team, the meetings and every quote below are invented to show the shape of the output. Nothing here comes from a real transcript.
 
 ## Scope
 

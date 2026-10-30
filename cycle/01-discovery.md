@@ -8,8 +8,6 @@ Whose problem are we trying to solve, and what do they do today?
 | What I check | I check the sources behind claims that affect the decision. Desk research identifies questions to investigate; interviews and observed behavior test them. |
 | Useful output | A short problem statement, current alternatives and open questions. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 Framing the problem ends with a problem doc I can defend in one page and a landscape that names what people use today.
 
 ## What I do

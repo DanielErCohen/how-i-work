@@ -36,7 +36,7 @@ Set your git name and email if you have not. The command stops if `~/my-second-b
 
 **Minutes 2 to 4: fill in `.claude/CLAUDE.md`.** Replace the two language placeholders. Then read the
 section "Do not enumerate active work in this file" and the section "Two rules for every file". Keep
-the file under about 100 lines, because every line loads in every session.
+the file short, under about 150 lines, because every line loads in every session.
 
 **Minutes 4 to 6: register the memory folder and the session-start pull.** Both go in
 `~/.claude/settings.json`. The exact entries are in [`hooks/README.md`](hooks/README.md). Set

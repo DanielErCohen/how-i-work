@@ -8,8 +8,6 @@ Does the result meet the intended behavior and quality bar?
 | What I check | I verify findings and walk the actual experience. AI review can find issues; usability evidence still needs people using the product. |
 | Useful output | Review findings, acceptance checks and remaining gaps. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 Nothing merges on the author's word. The red team, one adversarial reviewer with a fresh context, reviews every plan, and review agents check every pull request.
 
 ## What I do

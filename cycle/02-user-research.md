@@ -8,8 +8,6 @@ What do real people do, and where does the task fail?
 | What I check | Demand claims need evidence from real people. I keep interview notes separate from AI suggestions and label feedback from friends. |
 | Useful output | Dated user evidence, a list of gaps and the next questions to test. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 I talk to real users first. A recipient panel (product preset) of AI-played users from the exact target segment rehearses flows before real users see them.
 
 ## What I do

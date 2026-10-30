@@ -8,8 +8,6 @@ Did the change help, and what should we do next?
 | What I check | I check comparable populations and time windows, then decide what the result supports. An unrun test stays an open question. |
 | Useful output | A dated readout and the next decision or research question. |
 
-The detail below shows how I apply this in my side projects. Use the question and output with your own team's documents.
-
 I read the north star and retention from the product's own logs, then go back to step 1 with what I learned.
 
 ## What I do
