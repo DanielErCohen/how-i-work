@@ -79,7 +79,7 @@ Each area needs a **standard**: one line on what "kept up" means. Without one, t
 reviewed and becomes a junk drawer.
 
 **Day 3, name your live projects.** List only what you work on now, each with an end state you would
-recognise. Use `note-templates/project.md`. Five projects is a lot. If your list has twenty, most of
+recognize. Use `note-templates/project.md`. Five projects is a lot. If your list has twenty, most of
 them are areas or wishes.
 
 **Day 4, file the inbox.** Move the day-one captures into areas and projects. An item you cannot place

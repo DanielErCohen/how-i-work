@@ -13,7 +13,7 @@ Code lives in `<owner>/<code-repo>`. This repo holds prose only. A doc belongs i
 - `beliefs.md`: each belief has a "wrong if" threshold.
 - `sprints/YYYY-MM-DD-name/`: goal, done-when, one scope question, lane specs.
 - `specs/`: feature specs, each anchored to a base commit of the code repo.
-- `analytics/`: event catalogue, north star, dated reads.
+- `analytics/`: event catalog, north star, dated reads.
 - `legal/`: policies and reviews.
 - `qa-findings/`: findings from reviews, one file per walk.
 

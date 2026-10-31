@@ -55,7 +55,7 @@ this rule.
 identifiers as breaches wastes real effort. Public-by-design values include OAuth client IDs, Apple
 team IDs, Firebase web-app config, Google Analytics measurement IDs, and publishable payment keys
 (`pk_live_…`). Before rotating, check what the value actually is. Conversely, `sk_live_…`, anything
-labelled "secret", and anything you had to log in to obtain is real.
+labeled "secret", and anything you had to log in to obtain is real.
 
 ---
 
@@ -63,13 +63,13 @@ labelled "secret", and anything you had to log in to obtain is real.
 
 None of these need to leave a private repo. All of them need to leave any extract you publish, and the
 list is longer than people expect, which is the argument for keeping the repo private rather than
-sanitising it later.
+sanitizing it later.
 
 | Category | Examples | Where it hides |
 |----------|----------|----------------|
 | **Financial** | Salary and equity figures, account and card numbers, net-worth tracking, invoices, tax filings, spending logs | A `finances` area, negotiation notes, any budget spreadsheet |
 | **Health** | Diagnoses, test results, medications, dosages, therapy or appointment notes, dates of procedures | A `health` area, daily notes, family notes |
-| **Identity and household** | Full legal names, dates of birth, home and work addresses, phone numbers, government ID numbers, passport and licence details, insurance and policy numbers | Travel bookings, forms, contact lists, delivery notes |
+| **Identity and household** | Full legal names, dates of birth, home and work addresses, phone numbers, government ID numbers, passport and license details, insurance and policy numbers | Travel bookings, forms, contact lists, delivery notes |
 | **Employer-confidential** | Unreleased roadmaps, revenue and pipeline figures, internal metrics, headcount plans, contract terms, anything under NDA | Work areas, meeting notes, strategy docs, decision logs |
 | **Third-party personal data** | Anything about another person: their health, finances, performance reviews, private messages, verbatim quotes, gift plans, relationship detail | Meeting notes, family and friend notes, feedback drafts, transcripts |
 | **Derived and inferred** | Daily routines and location patterns, travel dates and absences, relationship and family structure, religious or political leanings, purchase history | Calendars, daily notes, trip planning, grocery lists |
@@ -78,7 +78,7 @@ Two categories deserve emphasis because they are the ones people miss:
 
 **Third-party data is not yours to publish.** Your notes about a conversation contain someone else's
 words and someone else's situation. They never agreed to be in your repo. This is the category most
-likely to cause actual harm, and no anonymisation script finds it, because it is prose.
+likely to cause actual harm, and no anonymization script finds it, because it is prose.
 
 **Derived information leaks without any single sensitive line.** No individual note says where you live
 or when the house is empty. A year of travel plans, grocery notes, and daily entries says both.
@@ -88,7 +88,7 @@ Aggregation is the exposure, so file-by-file review will not catch it.
 
 ## Sharing something anyway
 
-If you want to publish part of the repo, do not sanitise the repo. **Build a separate artifact.**
+If you want to publish part of the repo, do not sanitize the repo. **Build a separate artifact.**
 
 1. Start a new repository. Never remove content from the real one and push it, because history keeps
    everything you removed.

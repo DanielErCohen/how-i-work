@@ -76,6 +76,6 @@ Notes accumulate by default and nothing removes them by default, so
 a repo with no sweep gets slower to search every week. `/weekly-review` and `/archive-sweep` are the
 load-bearing parts of the template.
 
-## Licence
+## License
 
 MIT, copyright Daniel Cohen 2026. See the repo [`LICENSE`](../LICENSE).

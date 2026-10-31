@@ -66,4 +66,4 @@ Transcripts hold your colleagues' words and personal data.
 
 ## Where it came from
 
-Built as a general method. Test it on your own transcripts. It ships with no company material and no transcripts. The licence is MIT, like the rest of this repo.
+Built as a general method. Test it on your own transcripts. It ships with no company material and no transcripts. The license is MIT, like the rest of this repo.

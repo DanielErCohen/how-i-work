@@ -4,7 +4,7 @@ Hooks run on your machine, so they need Claude Code. Read the scripts before you
 
 ## notes-repo-pull.sh (SessionStart)
 
-Fast-forwards your notes repo at session start. Set `NOTES_REPO` or edit the default path. A failed pull prints one line to you and stays out of Claude's context.
+Fast-forward your notes repo at session start. Set `NOTES_REPO` or edit the default path. A failed pull prints one line to you and stays out of Claude's context.
 
 ## slop-check-hook.sh (PostToolUse)
 

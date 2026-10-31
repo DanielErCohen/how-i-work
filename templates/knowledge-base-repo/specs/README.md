@@ -9,11 +9,11 @@ Base commit: `<code-repo>@<sha>`
 Decision record: `decisions/YYYY-MM-DD-name.md`
 
 ## Problem and user need
-## Desired behaviour
+## Desired behavior
 Product-level rules the implementer works against.
 ## Out of scope
 ## Success metric
-The event or number that shows it works, from the event catalogue.
+The event or number that shows it works, from the event catalog.
 ## Open questions
 Each with a default.
 ```

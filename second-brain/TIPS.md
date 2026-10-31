@@ -174,7 +174,7 @@ git ls-files | grep -E ' [0-9]+(\.|$)'
 
 ## Filesystem gotchas that bite once
 
-**Case consistency.** Pick lowercase and hold it. One capitalised folder among lowercase siblings
+**Case consistency.** Pick lowercase and hold it. One capitalized folder among lowercase siblings
 means every path written from memory, every glob and every instruction-file reference has to get the
 exception right, and renaming it later is a large commit. Do it in week one. macOS is case-insensitive
 and git is not, so a rename that changes only case takes two steps:

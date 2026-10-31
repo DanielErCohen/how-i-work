@@ -25,13 +25,13 @@ This skill needs the `gh` CLI and a local repo, so it runs in Claude Code only.
 - After recon, ask the questions whose answers change the issue: who is affected, what they should be able to do, where the scope ends, and what signal shows it worked.
 - One question at a time, each with your proposed default, so the user can answer "yes" and move on.
 - Stop at five questions or when the answers stop changing the draft. Anything still open goes to Open questions.
-- Skip this step when the item already answers these, such as a bug report with steps, expected and actual behaviour.
+- Skip this step when the item already answers these, such as a bug report with steps, expected and actual behavior.
 
 ## 4. Draft the what; the how belongs to the implementer
 Title: a short imperative phrase. Body sections, one line where one line is enough:
 - Summary: 2-4 lines, leading with the most surprising recon finding.
 - Problem / user need: who, when, how painful, and the signal that shows it.
-- Desired behaviour: product-level rules the implementer works against.
+- Desired behavior: product-level rules the implementer works against.
 - Out of scope: what this is not.
 - Feasibility notes: `file:line` pointers to where things live, leaving implementation choices to the engineer; for a value that already exists, write "reconcile with it, do not recompute".
 - Success metric: a concrete signal.

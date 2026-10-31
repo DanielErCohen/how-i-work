@@ -28,7 +28,7 @@ The [workflow on the site](https://danielercohen.github.io/ai-pm/principles/cycl
 The examples in the guides come from two products as of Oct '26:
 
 - Wellness Coach: a work-in-progress iPhone app that aims to keep one log of activity. Sprints, role agents, beliefs with thresholds.
-- Sparktale: a live app for personalised printed children's books. A knowledge-base repo for prose, a code repo for code-coupled docs, a partner developer leading engineering. I wrote a kill test before spending.
+- Sparktale: a live app for personalized printed children's books. A knowledge-base repo for prose, a code repo for code-coupled docs, a partner developer leading engineering. I wrote a kill test before spending.
 
 Project write-ups: https://danielercohen.github.io/ai-pm
 

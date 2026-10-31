@@ -1,6 +1,6 @@
 # Second brain - Claude instructions
 
-This repository is a personal second brain organised with the **PARA method**. Your job is to help
+This repository is a personal second brain organized with the **PARA method**. Your job is to help
 capture, find and work with knowledge across it.
 
 Replace the two `<angle-bracket>` language placeholders below, delete the sections that do not apply,
@@ -29,7 +29,7 @@ and `routines/` (prompts that run on a schedule, see `routines/README.md`).
 ## Two rules for every file
 
 1. **One fact, one home.** A fact lives in exactly one file. Other files link to it. No file
-   summarises another, and no copy exists unless a check fails when the copies differ.
+   summarizes another, and no copy exists unless a check fails when the copies differ.
 2. **Files state the current conclusion. History is git.** A note reads as if it had always been
    true: no inline revision notes, no "changed from X to Y after review", no trail of superseded
    intermediate decisions. Use `git log` for the history. Notes whose purpose is the log (weekly

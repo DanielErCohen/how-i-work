@@ -12,7 +12,7 @@ Before the first user, I decide what I will measure and where the number comes f
 
 ## What I do
 
-- Write an event catalogue: each event, its trigger, its properties, and the question it answers.
+- Write an event catalog: each event, its trigger, its properties, and the question it answers.
 - Pick a north star, the one number that shows the product is working, that I can read from the product's own logs. A number that needs a manual count does not qualify.
 - Collect analytics only after the user consents.
 - Write an instrumentation QA doc and walk it on every build, so a missing event is found before launch.
@@ -23,7 +23,7 @@ Before the first user, I decide what I will measure and where the number comes f
 
 ## What AI changes here
 
-An agent drafts the catalogue from the spec and checks the code for events that fire without a catalogue entry, or the reverse. I review the north-star definition myself.
+An agent drafts the catalog from the spec and checks the code for events that fire without a catalog entry, or the reverse. I review the north-star definition myself.
 
 ## Where I still check
 

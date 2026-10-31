@@ -12,4 +12,4 @@ What we believe about users and the product, with the observation that would pro
 <The condition at the 6-month or 12-month check that ends the project. Write it before the spend.>
 Example form: "Stop if at the 6-month check <metric> is below <number> for <population>."
 
-Source types are ranked. Committed money, time or reputation beats observed behaviour. Observed behaviour beats stated opinion. Opinion beats market reports and analogies. Friends are biased evidence: mark it.
+Source types are ranked. Committed money, time or reputation beats observed behavior. Observed behavior beats stated opinion. Opinion beats market reports and analogies. Friends are biased evidence: mark it.

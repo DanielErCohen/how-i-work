@@ -33,5 +33,5 @@ The panel makes the first usability pass cheap, so I spend real interview time o
 
 ## Example
 
-- Wellness Coach: the recipient panel walks each build. In Oct '26 its walks led to timer chips replacing the Start sheet's "not available yet" entries and to removing a Talk button for a voice feature that did not exist. As of Oct '26 the re-check on the simulator is pending. Friends will be the first testers, and their feedback will be labelled as such.
+- Wellness Coach: the recipient panel walks each build. In Oct '26 its walks led to timer chips replacing the Start sheet's "not available yet" entries and to removing a Talk button for a voice feature that did not exist. As of Oct '26 the re-check on the simulator is pending. Friends will be the first testers, and their feedback will be labeled as such.
 - Sparktale: customer feedback is filed one item at a time. Each one becomes an issue that says what happened and why it matters, and the partner developer can start on it without asking me anything.

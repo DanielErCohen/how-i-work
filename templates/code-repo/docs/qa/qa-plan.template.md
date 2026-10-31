@@ -24,7 +24,7 @@ Ranked by impact if wrong.
 - [ ] Contrast and focus order checked on the changed screens.
 
 ## Instrumentation
-- [ ] Each new event fires once, with the properties in the catalogue.
+- [ ] Each new event fires once, with the properties in the catalog.
 - [ ] No analytics event fires before consent.
 
 ## Regression

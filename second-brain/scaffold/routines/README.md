@@ -9,7 +9,7 @@ Each routine is one markdown file in this folder with six parts:
 
 1. **Goal.** One sentence on what exists after a run that did not exist before.
 2. **Inputs.** The files, commands or inboxes it reads. Name the paths.
-3. **Steps.** A short numbered list. Keep judgement calls out of it; say what to do when a step
+3. **Steps.** A short numbered list. Keep judgment calls out of it; say what to do when a step
    finds nothing.
 4. **Output.** Where the result goes: a dated note, an appended log row, a message to you.
 5. **State.** What the next run needs to know about this one, such as a last-run date written to a

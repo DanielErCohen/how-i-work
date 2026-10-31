@@ -8,7 +8,7 @@ Review on: YYYY-MM-DD
 <The decision in one or two sentences. One recommendation.>
 
 ## Why
-<The load-bearing reason first. Evidence with source and date. Mark the type: committed money or time, observed behaviour, stated opinion, market report.>
+<The load-bearing reason first. Evidence with source and date. Mark the type: committed money or time, observed behavior, stated opinion, market report.>
 
 ## Strongest counter
 <The best argument against, stated fairly, and the answer.>

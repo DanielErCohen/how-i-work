@@ -112,7 +112,7 @@ The extension auto-detects the page type and shows it in the popup:
 ### What happens next
 
 - The extension reads the page content (and extracts transcript for YouTube)
-- The AI model analyses it **once**, picks a category, and applies a type-appropriate template
+- The AI model analyzes it **once**, picks a category, and applies a type-appropriate template
 - The same note is saved to every destination you ticked (each repo gets its own copy, including the screenshot)
 - You get a link per destination - and if one fails, the others still succeed
 

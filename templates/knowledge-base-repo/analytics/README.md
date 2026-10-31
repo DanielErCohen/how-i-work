@@ -8,5 +8,5 @@ Rules:
 
 - A number carries its unit, its date range and the filter it was computed on.
 - Two series sit side by side only when the basis matches.
-- Analytics are consent-gated: the catalogue marks which events need consent.
+- Analytics are consent-gated: the catalog marks which events need consent.
 - The instrumentation QA doc lives in the code repo at `docs/qa/instrumentation.md`.

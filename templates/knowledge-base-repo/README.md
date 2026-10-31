@@ -12,7 +12,7 @@ knowledge-base-repo/
   decisions/             one-page decision records
   sprints/               one folder per sprint
   specs/                 specs for features, anchored to a base commit
-  analytics/             event catalogue, north star, reads
+  analytics/             event catalog, north star, reads
   legal/                 policies, reviews, jurisdiction notes
   qa-findings/           findings from reviews and QA walks
 ```

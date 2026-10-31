@@ -38,7 +38,7 @@ Back up your current file first: `cp ~/.claude/settings.json ~/.claude/settings.
 
 | Event | Script | Why |
 |---|---|---|
-| `SessionStart` | `notes-repo-pull.sh`, 20 s timeout | Fast-forwards the notes repo so a session starts from the remote state. The hook blocks Claude's first reply until it ends, so keep the timeout short. |
+| `SessionStart` | `notes-repo-pull.sh`, 20 s timeout | Fast-forward the notes repo so a session starts from the remote state. The hook blocks Claude's first reply until it ends, so keep the timeout short. |
 | `PreToolUse` on Bash (optional, left out of the example file) | `rtk-rewrite.sh` | Rewrites commands to compress output. rtk generates the script, see [`hooks/README.md`](hooks/README.md). |
 | `PostToolUse` on Write and Edit | `slop-check-hook.sh` | Runs the slop check on markdown and HTML that Claude wrote. Hits go back to Claude to fix or justify. |
 

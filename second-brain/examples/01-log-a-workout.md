@@ -21,7 +21,7 @@ within a day of doing it".
 ## What Claude does
 
 1. Finds the log in the fitness area and reads the header.
-2. Maps the sentence: type `run`, distance 4.6 in kilometres, duration 27 in minutes, effort `easy`.
+2. Maps the sentence: type `run`, distance 4.6 in kilometers, duration 27 in minutes, effort `easy`.
 3. Uses today's date, here the sample date `2025-10-15`, because "this morning" is today.
 4. Leaves `note` empty, since you said nothing for it.
 5. Appends the row at the end of the file.
@@ -43,7 +43,7 @@ in its confirmation. Say "that run was 4.8 km, I misread the watch" and Claude a
 with the corrected distance and a `note` of `corrects 2025-10-15 run`. The first row stays, because
 the log only grows and history is git.
 
-## Ask for numbers afterwards
+## Ask for numbers afterward
 
 The log holds rows. Ask "what was my average weekly distance over the last 4 weeks?" and Claude
 computes it from the rows. No computed column belongs in the file.

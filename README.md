@@ -8,7 +8,7 @@ Product management tools I built and use, free to share and adapt.
 - AI widens what you look at and argues with your draft. You frame the problem, decide and sign off.
 - Each tool works best adapted to you: [Make it yours](#make-it-yours) has a prompt for your AI.
 
-## Catalogue
+## Catalog
 
 | Tool | What it fixes | Time to set up | Folder |
 |---|---|---|---|
@@ -34,7 +34,7 @@ The [nine-step workflow](https://danielercohen.github.io/ai-pm/principles/cycle.
 
 ## Start with your task
 
-Choose a tool from the catalogue and follow its page's instructions for your assistant.
+Choose a tool from the catalog and follow its page's instructions for your assistant.
 
 - Each page includes an example or a first task to try.
 - You can use the decision record as a plain document without installing a skill.
@@ -94,6 +94,6 @@ I set up [tool folder] from the how-i-work repo. Read it, then ask me three ques
 
 Read [ARTIFACTS.md](ARTIFACTS.md) for source paths and recipes for turning a tool's output into an editable artifact with a preview, starter download and adaptation prompt. Public examples are made up; keep your own inputs in your private working copy. The [development review starter](artifacts/development-review/README.md) opens local JSON in four views and includes [agent instructions](artifacts/development-review/AGENTS.md).
 
-## Licence
+## License
 
 MIT, copyright Daniel Cohen 2026, except the files listed in [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md). See [`LICENSE`](LICENSE).

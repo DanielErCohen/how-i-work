@@ -27,7 +27,7 @@ Lead with the point, numbers over adjectives, " - " as connective, never an em-d
 
 Dedupe across sources (GenAI PM repeats everyone). Link the original article, post or video; use the Gmail viewUrl only when no web link exists. Never invent a URL.
 
-Product news gets the most weight: what companies shipped, launched, priced, repackaged or killed, and distribution moves. Favour <your focus areas>.
+Product news gets the most weight: what companies shipped, launched, priced, repackaged or killed, and distribution moves. Favor <your focus areas>.
 
 Always send a digest. If no new newsletters arrived, send the drill and "Use it this week" only.
 
@@ -49,7 +49,7 @@ Curriculum (swap in the talks and books you follow):
 
 1 Problem framing (jobs to be done, 5 whys)
 2 Continuous discovery and opportunity solution trees (Teresa Torres)
-3 Product kata: understand the direction, analyse the current state, set the next measurable goal, run the cheapest experiment, loop
+3 Product kata: understand the direction, analyze the current state, set the next measurable goal, run the cheapest experiment, loop
 4 Strategy cascade: vision, strategic intents, portfolio strategy, product initiatives
 5 Product operating model: practices, structure, strategy, insights, culture
 6 Governance that rewards learning: solution classification (for example experiment, alpha, beta, GA); cadences that move from "what will you deliver" to "what did you learn"
@@ -58,7 +58,7 @@ Curriculum (swap in the talks and books you follow):
 9 Commercial product management: draw the line from your work to the business goal and make your data decision-ready
 10 Assumption mapping: value, usability, feasibility, viability risks (Marty Cagan)
 11 Metrics: north star, input metrics, diagnosing a metric drop
-12 Prioritisation under constraints: opportunity cost, RICE failure modes, saying no
+12 Prioritization under constraints: opportunity cost, RICE failure modes, saying no
 13 Product strategy kernel: diagnosis, guiding policy, coherent actions (Richard Rumelt)
 14 Experiment design: sample size, guardrails, when not to A/B test
 15 Product sense case: design X for Y
@@ -87,7 +87,7 @@ Use it this week: one line on how to apply the drill's skill to a decision at wo
 
 ## 7. HTML template
 
-Gmail can drop CSS backgrounds, so every title must stay readable without them: use dark or accent-coloured text, borders and bgcolor attributes; never white text. Fill this; repeat list items and item blocks as needed; drop any section with no content. Escape HTML in content. Also send a plain-text body with the same content (section names in capitals, links on their own line).
+Gmail can drop CSS backgrounds, so every title must stay readable without them: use dark or accent-colored text, borders and bgcolor attributes; never white text. Fill this; repeat list items and item blocks as needed; drop any section with no content. Escape HTML in content. Also send a plain-text body with the same content (section names in capitals, links on their own line).
 
 ```html
 <div style="display:none;max-height:0;overflow:hidden">{{PREVIEW}}&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</div>
@@ -146,7 +146,7 @@ Gmail can drop CSS backgrounds, so every title must stay readable without them: 
 </table></td></tr></table>
 ```
 
-## 8. Send and prioritise
+## 8. Send and prioritize
 
 - send_message to `<your address>` (add more recipients in To if you want), with htmlBody and body. Keep `<your address>` in To: the window and drill history in section 1 search for it.
 - On the returned message id, update_message_labels add STARRED and IMPORTANT.

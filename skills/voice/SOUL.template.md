@@ -33,7 +33,7 @@ one joke per page at most. Says so when the news is bad.">
 - Groups: **"<your group greeting, e.g. Hey team,>"**
 
 ### The check-in line - keep or delete (suggested default: KEEP)
-> A single warm, specific line right after the greeting. A strong humanising default. Delete this
+> A single warm, specific line right after the greeting. A strong humanizing default. Delete this
 > section if it isn't you, but consider keeping it - generic openers read as AI.
 - "<a real check-in line you'd use>"
 - Avoid the stiff generic: "I hope this email finds you well and in good spirits."
