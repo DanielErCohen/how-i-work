@@ -39,4 +39,4 @@ type: feedback | project | reference | user
 - [`feedback-tests-before-merge.md`](feedback-tests-before-merge.md)
 - [`project-checkout-redesign.md`](project-checkout-redesign.md)
 
-The examples are invented.
+The examples are made up.

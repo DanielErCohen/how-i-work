@@ -14,14 +14,14 @@ Product management tools I built and use, free to share and adapt.
 |---|---|---|---|
 | [Claude Code setup](https://danielercohen.github.io/ai-pm/toolkit/claude.html) | Set up Claude Code so it follows your rules and loads less context at every session start. | 30 minutes | [`claude/`](claude/README.md) |
 | [Project start](https://danielercohen.github.io/ai-pm/toolkit/project-start.html) | Claude interviews you about a new project and writes down who decides, what waits on you and when to stop. | One interview | [project-start repo](https://github.com/DanielErCohen/project-start) |
-| [Skills](https://danielercohen.github.io/ai-pm/toolkit/skills.html) | Four skills: challenge a plan, test a doc on its readers, turn an idea or bug into an issue an engineer can start on and write in your own voice. | 2 to 20 minutes each | [`skills/`](skills) |
+| [Skills](https://danielercohen.github.io/ai-pm/toolkit/skills.html) | Four skills: challenge a plan, test a doc on simulated readers, turn a bug into an issue an engineer can start on, draft in your own voice. | 2 minutes per skill, voice takes longer | [`skills/`](skills) |
 | [Meeting review](https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html) | Find the habits to change in how you run meetings, from your own transcripts. | 15 minutes | [`meeting-review/`](meeting-review/README.md) |
-| [Routines](https://danielercohen.github.io/ai-pm/toolkit/routines.html) | Get your PM newsletters as one 4-minute digest, twice a week. | 30 to 45 minutes each | [`routines/`](routines) |
+| [Routines](https://danielercohen.github.io/ai-pm/toolkit/routines.html) | Get your PM newsletters as one 4-minute digest, twice a week. Run it by hand in the Claude app first. | 30 to 45 minutes each | [`routines/`](routines) |
 | [Second brain](https://danielercohen.github.io/ai-pm/toolkit/second-brain.html) | Give Claude your context at every session start, so you stop repeating it. | 10 minutes | [`second-brain/`](second-brain/README.md) |
 | [Page-saving extension](https://danielercohen.github.io/ai-pm/toolkit/small-builds.html) | Save the pages and podcasts worth keeping to your notes in one click. | 15 to 20 minutes | [`small-builds/`](small-builds/README.md) |
 | [cv-tailor](https://danielercohen.github.io/ai-pm/toolkit/cv-tailor.html) | Improve your CV so it gets read, then tailor it to each role to get more callbacks. | 15 minutes | [cv-tailor repo](https://github.com/DanielErCohen/cv-tailor) |
 | [Decision record](https://danielercohen.github.io/ai-pm/toolkit/decision-record.html) | Write down a decision, its evidence and the test that would change it, so you can check it later. | Plain document | [`templates/decision-record.md`](templates/decision-record.md) |
-| [Development review](https://danielercohen.github.io/ai-pm/toolkit/development-review.html) | Use your weekly notes to review progress and choose a practice to try. | Open one HTML file, no install | [`artifacts/development-review/`](artifacts/development-review/README.md) |
+| [Personal development review](https://danielercohen.github.io/ai-pm/toolkit/development-review.html) | Look back at your own week of PM work and pick one practice to try next week. | Open one HTML file, no install | [`artifacts/development-review/`](artifacts/development-review/README.md) |
 
 ## How I use AI across product work
 
@@ -77,7 +77,7 @@ cp -n ~/how-i-work/claude/agents/*.md ~/.claude/agents/
 
 The ready zips are on the site: https://danielercohen.github.io/ai-pm/toolkit/skills.html.
 
-- To build them yourself, run `bash tools/build-skill-zips.sh` in the [ai-pm](https://github.com/DanielErCohen/ai-pm) repo.
+- To build them yourself, run `bash tools/build-skill-zips.sh` in the [ai-pm](https://github.com/DanielErCohen/ai-pm) repo. Clone ai-pm, how-i-work and cv-tailor into the same folder first, because the script reads the other two as sibling folders.
 - A plain `zip` of the folder does not work, because the Claude app rejects some frontmatter keys that the script removes.
 
 Skills install both ways. Hooks, agents, `settings.json` and the scripts need Claude Code, because they run on your machine.
@@ -92,7 +92,7 @@ I set up [tool folder] from the how-i-work repo. Read it, then ask me three ques
 
 ## Create an artifact
 
-Read [ARTIFACTS.md](ARTIFACTS.md) for source paths and recipes for turning a tool's output into an editable artifact with a preview, starter download and adaptation prompt. Public examples are made up; keep your own inputs in your private working copy. The [development review starter](artifacts/development-review/README.md) opens local JSON in four views and includes [agent instructions](artifacts/development-review/AGENTS.md).
+Read [ARTIFACTS.md](ARTIFACTS.md) for source paths and recipes for turning a tool's output into an editable artifact with a preview, starter download and adaptation prompt. Public examples are made up. Keep your own inputs in your private working copy. The [personal development review starter](artifacts/development-review/README.md) opens local JSON in four views and includes [agent instructions](artifacts/development-review/AGENTS.md).
 
 ## License
 

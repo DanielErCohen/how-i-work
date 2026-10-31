@@ -3,14 +3,24 @@
 # The pattern lists below are the ruleset; intent-level families belong in
 # your global CLAUDE.md. Adapted from petergyang/no-ai-slop (MIT).
 # Curly apostrophes and HTML entities are normalized before matching, fenced code
-# and <script>/<style> bodies are skipped, the locale is pinned, and markdown/HTML
-# anchors catch negative-listing openers.
+# and <script>/<style> bodies are skipped, the locale is pinned to UTF-8 (en_US if
+# installed, else C.UTF-8, else C), and markdown/HTML anchors catch negative-listing openers.
 #
 # Usage: slop-check.sh <draft-file> [more-files...]
 # Exit 0 = clean, 1 = hits to fix or justify, 2 = bad arguments or unreadable file.
 
 set -uo pipefail
-export LC_ALL=en_US.UTF-8
+# Bash 5.2+ treats "&" in a replacement string as the matched text; file names may contain one.
+shopt -u patsub_replacement 2>/dev/null
+# Pin a UTF-8 locale that exists on this machine, so setlocale prints no warning.
+locales=$(locale -a 2>/dev/null)
+if printf '%s\n' "$locales" | grep -qixE 'en_US\.utf-?8'; then
+  export LC_ALL=en_US.UTF-8
+elif printf '%s\n' "$locales" | grep -qixE 'C\.utf-?8'; then
+  export LC_ALL=C.UTF-8
+else
+  export LC_ALL=C
+fi
 
 if [[ $# -eq 0 ]]; then
   echo "usage: slop-check.sh <draft-file> [more-files...]" >&2
@@ -132,12 +142,13 @@ check "assistant-isms" "certainly!|great question|i hope this helps|let me know 
 check "hedged recommendation" 'now \((this|the)|next \((the|this)|as (a|the) v0\b|grow (it|this|them|that) into|ship [^,.]{1,40}, (keep|hold|park)|with [^,.]{1,40}.s [a-z]+ inside|instead of picking sides|without betting on|while the [^,.]{1,40} (breathes|settles|matures)'
 
 # 10. Dashes used as connectives - em-dash, horizontal bar, or spaced en-dash.
-#     Max 2 per file, 0 in short copy. Unspaced en-dashes in ranges (2019–2026) stay clean.
+#     None allowed, matching the "No em-dashes" line in CLAUDE.template.md.
+#     Unspaced en-dashes in ranges (2019–2026) stay clean.
 for j in "${!SAN[@]}"; do
   n=$(grep -oE -- '—|―|‒| – ' "${SAN[$j]}" | wc -l | tr -d ' ')
-  if [[ "$n" -gt 2 ]]; then
+  if [[ "$n" -gt 0 ]]; then
     hits=1
-    echo "── connective dashes: $n in ${ORIG[$j]} (max 2 per file, 0 in short copy)"
+    echo "── connective dashes: $n in ${ORIG[$j]} (none allowed)"
     grep -nE -- '—|―|‒| – ' "${SAN[$j]}" | head -10
     echo
   fi

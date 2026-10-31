@@ -3,14 +3,17 @@
 
 Reads a CSV with the columns in REQUIRED, runs checks, and writes a JavaScript
 data file only if every check passes, creating the output folder if it is
-missing. Exit 0 = written. Exit 1 = a check failed, nothing written. Exit 2 =
-bad arguments or unreadable input.
+missing. The file is written to a temporary name and then renamed, so a crash
+never leaves a half-written data file. Exit 0 = written. Exit 1 = a check
+failed, nothing written. Exit 2 = bad arguments or unreadable input (a missing
+file or one that is not UTF-8).
 
 Replace REQUIRED, the checks and the output shape with your own.
 """
 import argparse
 import csv
 import json
+import math
 import os
 import sys
 from datetime import date
@@ -27,7 +30,8 @@ def fail(msg):
 
 def load(path):
     try:
-        with open(path, newline="", encoding="utf-8") as f:
+        # utf-8-sig drops the byte-order mark that Excel adds, so the first header reads "date".
+        with open(path, newline="", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
             missing = [c for c in REQUIRED if c not in (reader.fieldnames or [])]
             if missing:
@@ -36,6 +40,9 @@ def load(path):
     except OSError as e:
         print(f"error: cannot read {path}: {e}", file=sys.stderr)
         sys.exit(2)
+    except UnicodeDecodeError as e:
+        print(f"error: {path} is not UTF-8 ({e.reason}); save the CSV as UTF-8", file=sys.stderr)
+        sys.exit(2)
 
 
 def check(rows):
@@ -43,11 +50,16 @@ def check(rows):
         fail(f"only {len(rows)} rows, expected at least {MIN_ROWS}")
     clean = []
     for i, r in enumerate(rows, start=2):
+        short = [c for c in REQUIRED if r.get(c) is None]
+        if short:
+            fail(f"row {i}: no value for {short}; the row has fewer columns than the header")
         try:
             d = date.fromisoformat(r["date"])
             amount = float(r["amount"])
         except ValueError:
             fail(f"row {i}: bad date or amount")
+        if not math.isfinite(amount):
+            fail(f"row {i}: amount is not a finite number")
         if not RANGE[0] <= d <= RANGE[1]:
             fail(f"row {i}: date {d} outside range")
         if amount < 0:
@@ -67,8 +79,17 @@ def main():
     out_dir = os.path.dirname(a.out)
     if out_dir:
         os.makedirs(out_dir, exist_ok=True)
-    with open(a.out, "w", encoding="utf-8") as f:
-        f.write("window.DATA = " + json.dumps(rows, indent=2) + ";\n")
+    tmp = a.out + ".tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as f:
+            f.write("window.DATA = " + json.dumps(rows, indent=2, allow_nan=False) + ";\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, a.out)
+    except BaseException:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+        raise
     print(f"ok: {len(rows)} rows, last date {last}")
 
 

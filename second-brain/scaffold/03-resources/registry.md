@@ -13,7 +13,7 @@ spellings you have seen, so the next fix is a lookup.
 | Lakeside Park | place | the park by the river | Lake Side Park, Lakesight Park |
 | Mill Street Bakery | place | Saturday bread | Milestreet Bakery, Mill Street Bakeries |
 
-The rows above are invented. Replace them with your own.
+The rows above are made up. Replace them with your own.
 
 ## Rules
 

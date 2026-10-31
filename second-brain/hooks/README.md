@@ -45,7 +45,7 @@ The format is in [`../scaffold/memory/README.md`](../scaffold/memory/README.md).
 ## Skill and commands
 
 Inside the vault, Claude Code finds `.claude/commands/` and `.claude/skills/` by itself, so
-`/init`, `/capture`, `/weekly-review`, `/archive-sweep` and `log-entry` need no registration. To use
+`/brief`, `/capture`, `/weekly-review`, `/archive-sweep` and `log-entry` need no registration. To use
 `log-entry` in every project, copy it once:
 
 ```bash

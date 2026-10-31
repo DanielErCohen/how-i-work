@@ -1,5 +1,6 @@
 #!/bin/bash
 # PostToolUse hook: run slop-check.sh on prose Claude just wrote (markdown, HTML, Gmail drafts).
+# It only runs for the tools named in the settings matcher (`^(Write|Edit|mcp__.*__create_draft)$` in settings.example.json); the mcp__ branch below handles a draft's body.
 # PostToolUse cannot undo a write. Exit 2 hands stderr to Claude, which fixes or justifies each hit; exit 0 stays silent.
 # On Edit only the text this edit added is checked, so a hit Claude already justified in an untouched line is not reported again.
 input=$(cat)
@@ -28,7 +29,7 @@ case "$tool" in
     fi
     ;;
   mcp__*)
-    text=$(printf '%s' "$input" | jq -r '.tool_input.body // .tool_input.content // empty')
+    text=$(printf '%s' "$input" | jq -r '.tool_input.body // .tool_input.htmlBody // .tool_input.content // empty')
     [ -z "$text" ] && exit 0
     tmp=$(mktemp -d)
     target="$tmp/draft.md"

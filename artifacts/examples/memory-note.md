@@ -4,7 +4,7 @@ description: When summarizing research notes, keep observations separate from in
 type: feedback
 ---
 
-Made-up teaching example. The preference and incidents below were invented for this file.
+Made-up teaching example. The preference and incidents below were made up for this file.
 
 Keep an observation's source and date beside it. Put an interpretation in a separate sentence and label what remains unknown.
 

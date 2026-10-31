@@ -7,7 +7,7 @@ What we believe about users and the product, with the observation that would pro
 | 1 | <Belief, one sentence> | <A number, a date and a population> | <What we know, with date> | interviews, analytics, competitor, opinion, speculation | YYYY-MM-DD |
 | 2 | <Belief> | <Threshold> | <Evidence> | <type> | YYYY-MM-DD |
 
-## Stop rule
+## Kill line
 
 <The condition at the 6-month or 12-month check that ends the project. Write it before the spend.>
 Example form: "Stop if at the 6-month check <metric> is below <number> for <population>."

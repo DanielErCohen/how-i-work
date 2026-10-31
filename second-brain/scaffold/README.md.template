@@ -36,7 +36,7 @@ Navigation starts at `02-areas/areas.md` and `03-resources/resources.md`.
 
 | Command | Use |
 |---------|-----|
-| `/init` | Start of session: what is active, what is stale. |
+| `/brief` | Start of session: what is active, what is stale. |
 | `/capture` | File something out of the inbox. |
 | `/weekly-review` | The weekly hygiene pass. Do not skip this one. |
 | `/archive-sweep` | Move finished work out of the way. |

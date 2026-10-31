@@ -1,7 +1,7 @@
 ---
 name: panelist
 description: Play one reader of a draft for the recipient-panel skill. Read-only: it reads the draft and the brief and returns one short report. Use only when a skill or the user names it.
-model: haiku
+model: sonnet
 tools: Read, Grep, Glob
 ---
 

@@ -6,16 +6,16 @@
     {
       "title": "Compare the options on the same basis",
       "detail": "A made-up PM named speed and ease of maintenance as competing goals, but compared two options using different criteria.",
-      "evidence": "Invented observation E1: a planning note lists both goals; its comparison gives each option a different test.",
-      "limit": "This is one invented discussion, not evidence of a lasting behavior pattern."
+      "evidence": "Made-up observation E1: a planning note lists both goals; its comparison gives each option a different test.",
+      "limit": "One made-up discussion shows no lasting pattern."
     }
   ],
   "assessment": [
     {
       "title": "Decision clarity",
       "detail": "Tentative interpretation: the tradeoff is clear, but the comparison is incomplete. Apply the same criteria to both options before making the choice.",
-      "evidence": "Invented observation E1: competing goals were documented; comparison criteria were not shared.",
-      "limit": "One discussion supports this narrow interpretation, not a rating of the person. Review further examples before changing an assessment."
+      "evidence": "Made-up observation E1: competing goals were documented; comparison criteria were not shared.",
+      "limit": "One discussion supports only this narrow reading. It says nothing about the person. Review further examples before changing an assessment."
     }
   ],
   "roadmap": [
@@ -30,7 +30,7 @@
     {
       "title": "Drafted a decision brief",
       "detail": "Candidate \u00b7 Pending review. Personal contribution: drafted the comparison. Team contribution: reviewed the options. Stage: delivered; outcome and impact are still unknown.",
-      "evidence": "Invented observation E1: a comparison draft exists.",
+      "evidence": "Made-up observation E1: a comparison draft exists.",
       "limit": "Delivery alone does not establish adoption or impact. Keep this candidate pending until you review the evidence."
     }
   ]

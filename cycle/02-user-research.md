@@ -15,7 +15,7 @@ I talk to real users first. A recipient panel (product preset) of AI-played user
 - Run real interviews and write each one up in a dated file within a day.
 - Build the panel from the segment definition: three personas plus one skeptic (four in total, one batch). Each has a job to do, a context (device, time of day, what they use today) and a reason to quit.
 - Save each persona as a file with what it found last time, so the notes carry across builds. Add fresh readers each build who have never seen the product.
-- Run every build through the recipient panel (product preset) with [`skills/recipient-panel`](../skills/recipient-panel/SKILL.md): one subagent per persona on a fast model, each walking the flow and reporting where it stalls.
+- Run every build through the recipient panel (product preset) with [`skills/recipient-panel`](../skills/recipient-panel/SKILL.md): one subagent per persona on the mid model (Sonnet), each walking the flow and reporting where it stalls.
 - Turn customer feedback into issues one item at a time with [`skills/distill-to-gh-issue`](../skills/distill-to-gh-issue/SKILL.md).
 
 ## The artifact

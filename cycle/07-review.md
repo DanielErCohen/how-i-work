@@ -4,11 +4,11 @@ Does the result meet the intended behavior and quality bar?
 
 | Part | Practice |
 |---|---|
-| What AI changes here | I ask the `red-team` agent, one adversarial reviewer with a fresh context, to challenge it and identify gaps in the test plan. |
-| What I check | I verify findings and walk the actual experience. AI review can find issues; usability evidence still needs people using the product. |
+| What AI changes here | I ask the `red-team` agent, one fresh-context reviewer, to challenge the plan or the finished change and identify gaps in the test plan. |
+| What I check | I verify findings and walk the actual experience. AI review finds issues in the brief and the build. Usability evidence comes from people using the product. |
 | Useful output | Review findings, acceptance checks and remaining gaps. |
 
-Nothing merges on the author's word. The red team, one adversarial reviewer with a fresh context, reviews every plan, and review agents check every pull request.
+Nothing merges on the author's word. The red team is one fresh-context reviewer that challenges a plan or a finished change. Review agents check every pull request. A merge waits for my approval.
 
 ## What I do
 

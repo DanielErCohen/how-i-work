@@ -43,12 +43,23 @@ Replace this list with newsletters you read. Add each sender's full address to t
 ## Setup
 
 1. Subscribe to the newsletters. Create a Gmail label and a filter that applies it to your newsletters.
-2. Copy `routine-prompt.md` and replace each placeholder in angle brackets: your address, your label, your timezone and target hour.
-3. Create a scheduled routine in Claude Code with the Gmail connector and WebFetch enabled, and paste the prompt. Schedule it two slots one hour apart in UTC if your timezone has daylight saving, as the time gate in the prompt expects.
+2. Copy `routine-prompt.md` into the folder where you keep your prompts, and replace each placeholder in angle brackets: your address, your label, your timezone and target hour. `cp -n` never overwrites a file you already have:
+
+   ```bash
+   cp -n ~/how-i-work/routines/pm-digest/routine-prompt.md ./my-digest-prompt.md
+   ```
+
+3. Create a scheduled routine at [claude.ai/code/routines](https://claude.ai/code/routines), or with `/schedule` in Claude Code. Enable the Gmail connector and WebFetch, and paste the prompt. Schedule it two slots one hour apart in UTC if your timezone has daylight saving, as the time gate in the prompt expects.
 4. Run it once by hand and read the result. When the output is wrong, fix the prompt.
 
 ## Why it works this way
 
 - State in the sent mail means the routine needs no database, and a failed run leaves nothing half-written.
 - Hard caps on each section keep the digest short. The reader's attention is the scarce part.
-- Newsletter text is data. The prompt says never to follow instructions found inside it.
+- Newsletter text is data. The prompt says never to follow instructions found inside it, and fixes the recipient to the one address you set in it.
+
+## Risk
+
+Prompt injection is the risk: a newsletter can hide text that tells the routine to do something else. The routine reads outside text and holds the Gmail connector (read, send and label every mail) and WebFetch. The prompt fixes the recipient and treats newsletter text as data. That lowers the risk and leaves some of it.
+
+To read each digest before anything is sent, replace `send_message` in section 8 of the prompt with `create_draft` and drop the starring line after it. The digest waits in your Gmail drafts, and you send it yourself. Send it before the next run, because the window and the drill history are read from sent digests.

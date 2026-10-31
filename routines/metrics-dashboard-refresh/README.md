@@ -2,7 +2,7 @@
 
 A pattern for refreshing a dashboard from spreadsheets on a schedule so that bad data never reaches the page.
 
-The sample data in this folder is invented. The CSV has no comment lines, because the parser would read them as rows.
+The sample data in this folder is made up. The CSV has no comment lines, because the parser would read them as rows.
 
 ## The pattern
 
@@ -22,7 +22,7 @@ The sample data in this folder is invented. The CSV has no comment lines, becaus
 ## Files
 
 - [`parse_example.py`](parse_example.py): a stub parser. Replace the schema and checks with yours. It has no data and no identifiers.
-- [`data/sample-open-period.csv`](data/sample-open-period.csv): ten invented rows dated Mar '25 that pass the checks. Replace it with your own export.
+- [`data/sample-open-period.csv`](data/sample-open-period.csv): ten made-up rows dated Mar '25 that pass the checks. Replace it with your own export.
 
 ## Run it
 
@@ -32,7 +32,7 @@ python3 parse_example.py --input data/sample-open-period.csv --out dist/data.js
 echo $?   # 0 = written, 1 = a check failed and nothing was written
 ```
 
-The parser creates `dist/` if it is missing.
+The parser creates `dist/` if it is missing. Amounts must be finite numbers: `nan` and `inf` fail the check. A CSV saved by Excel with a byte-order mark works, and a file that is not UTF-8 exits 2. The data file is written to a temporary name and then renamed, so a crash never leaves a half-written file.
 
 ## Wire it to a schedule
 

@@ -16,12 +16,12 @@ The setup in this folder enforces the four rules below where a setting, a hook o
 
 ## The four rules
 
-1. **Split the models by job.** The strongest model plans and orchestrates. A mid model writes the code and reviews it. The fastest model does research, recon and intel gathering, because it is fast and cheap for reading. Independent red-teams run on the strongest model. Today that means Opus, Sonnet and Haiku.
-2. **One agent per task.** Research, recon, planning, coding and review each get their own agent with a narrow brief. Keep each context small.
-3. **Review before merge.** I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them. The red team, one adversarial reviewer with a fresh context, challenges the plan. Anything that touches money, user data, outgoing messages or cannot be undone waits for me.
+1. **Split the models by job.** The strongest model plans and orchestrates. A mid model takes the coding and review work you delegate. The fastest model does research and background reading, because it is fast and cheap for reading. Independent red-teams run on the strongest model. Today that means Opus, Sonnet and Haiku.
+2. **One agent by default.** The main session plans and codes. Subagents take work that runs in parallel or needs a fresh context, such as research, recon (background reading before the work starts) and review, each with a narrow brief. Keep each context small.
+3. **Review before merge.** I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them. The red team is one fresh-context reviewer that challenges a plan or a finished change. A merge waits for my approval. Anything that touches money, user data, outgoing messages or cannot be undone waits for me.
 4. **Add a map of the codebase.** A file in the repo covering structure, key files, conventions, and how to run and test. Claude reads it at the start of each session, so it does not rebuild the context every time.
 
-Start with the map, then split the next task across agents.
+Start with the map, then send the next research or review task to a subagent.
 
 ## What is in this folder
 
@@ -31,7 +31,7 @@ Start with the map, then split the next task across agents.
 | [`settings.example.json`](settings.example.json) | A `settings.json`. JSON has no comments, so [`settings.md`](settings.md) explains each key. |
 | [`hooks/`](hooks/README.md) | Session-start pull and the slop check on every write. The optional token-compression hook is a link to rtk. |
 | [`scripts/slop-check.sh`](scripts/slop-check.sh) | The banned-word, puffery and construction checker. |
-| [`agents/`](agents) | `researcher` (fast model, sourced briefs), `red-team` (strongest model, no file writes) and `panelist` (fast model, read-only reader for the recipient panel). |
+| [`agents/`](agents) | `researcher` (fast model, sourced briefs), `red-team` (strongest model, no file writes) and `panelist` (mid model, read-only reader for the recipient panel). |
 | [`memory/`](memory/README.md) | The memory format and two example notes. |
 
 ## Why each part exists
@@ -46,7 +46,7 @@ Start with the map, then split the next task across agents.
 
 **Allow list.** Prompts for routine reads and edits teach you to click through. Allow the routine, scope edits to the project folder, scope Bash to the commands you run every day, and leave web fetch and search to ask. The rules below stop what matters.
 
-**Deny list and sandbox.** The deny list is a tripwire for catastrophic commands (`rm -rf` on root or home, force pushes, piping curl into a shell) and reads of credential files (`~/.ssh`, `~/.aws`, `~/.config/gh`, `.npmrc`, `.netrc`, `.pem` keys, `.env` files). The sandbox is the boundary. A read deny also blocks edits and covers `.env.example`.
+**Deny list and sandbox.** The deny list is a tripwire for catastrophic commands (`rm -rf` on root or home, force pushes, piping curl into a shell, `git clean -f`, `git branch -D`, remote branch deletes) and reads of credential files (`~/.ssh`, `~/.aws`, `~/.config/gh`, `~/.gnupg`, `~/.kube`, `~/.git-credentials`, `.npmrc`, `.netrc`, `.pem` keys, `.env` files). The sandbox is the boundary. A read deny also blocks edits and covers `.env.example`.
 
 **Ask rules.** Merges, repo deletes and anything that sends a message (email, chat, a reply, a forward) stop for approval. These actions reach other people or cannot be undone. `gh pr merge` stays under ask in the example file. If you use a command-rewriting hook, each ask rule needs a twin for the rewritten command, because Claude Code matches rules after the hook runs.
 
@@ -56,13 +56,13 @@ Start with the map, then split the next task across agents.
 
 **Concise output style.** The built-in style keeps Claude Code's engineering instructions and cuts the chatter. A custom style that strips them costs more than it saves.
 
-**Hooks.** `SessionStart` pulls the notes repo so each session starts from the remote state. `PostToolUse` runs the slop check on every markdown or HTML write and hands hits back to Claude to fix or justify. Optional: [rtk](https://github.com/rtk-ai/rtk), a Bash output compressor, adds its own `PreToolUse` hook. The example settings leave it out because rtk generates that script on your machine.
+**Hooks.** `SessionStart` pulls the notes repo so each session starts from the remote state. `PostToolUse` runs the slop check on every markdown or HTML write and on every email draft Claude creates, and hands hits back to Claude to fix or justify. Optional: [rtk](https://github.com/rtk-ai/rtk), a Bash output compressor, adds its own `PreToolUse` hook. The example settings leave it out because rtk generates that script on your machine.
 
 **`slop-check.sh`.** An executable ban list for puffery, inflated vocabulary, negation-antithesis and em-dashes. A hook enforces what a written rule can only request.
 
-**Agents.** `researcher` runs on the fastest model and returns a sourced brief under 600 words. `red-team` runs on the strongest model, has no file-write tools (it can fetch the web) and gives an independent challenge. `panelist` runs on the fastest model with Read, Grep and Glob only, and plays one reader for the recipient panel.
+**Agents.** `researcher` runs on the fastest model with web tools only and returns a sourced brief under 600 words. `red-team` runs on the strongest model, has no file-write tools (it can fetch the web) and gives an independent challenge. `panelist` runs on the mid model with Read, Grep and Glob only, and plays one reader for the recipient panel.
 
-**Recipient panel rule.** The template holds one line for `CLAUDE.md` that sends anything bound for other people through the [`recipient-panel`](../skills/recipient-panel/SKILL.md) skill first. Once you add it, Claude runs the panel before a doc, CV or page goes out, without being asked. Each reader role becomes a `panelist` subagent (Read, Grep and Glob only) on a fast model by default, and on a stronger one for high-stakes reads. The `red-team` agent stays the single adversarial reviewer. Install the skill into `~/.claude/skills/` too: the rule has no effect without it.
+**Recipient panel rule.** The template holds one line for `CLAUDE.md` that sends anything bound for other people through the [`recipient-panel`](../skills/recipient-panel/SKILL.md) skill first. Once you add it, Claude runs the panel before a doc, CV or page goes out, without being asked. Each reader role becomes a `panelist` subagent (Read, Grep and Glob only) on the mid model by default, and on a stronger one for high-stakes reads. The `red-team` agent stays the single adversarial reviewer. Install the skill into `~/.claude/skills/` too: the rule has no effect without it.
 
 **Memory.** One fact per file with frontmatter, an index file with one line per memory. Feedback notes carry the reason and how to apply them.
 
@@ -82,7 +82,7 @@ cp -n ~/how-i-work/claude/agents/*.md ~/.claude/agents/
 cp -Rn ~/how-i-work/skills/recipient-panel ~/.claude/skills/
 cp -n ~/how-i-work/claude/scripts/slop-check.sh ~/.claude/scripts/
 cp -n ~/how-i-work/claude/hooks/*.sh ~/.claude/hooks/
-chmod +x ~/.claude/scripts/slop-check.sh ~/.claude/hooks/*.sh
+chmod +x ~/.claude/scripts/slop-check.sh ~/.claude/hooks/notes-repo-pull.sh ~/.claude/hooks/slop-check-hook.sh
 ```
 
 Then replace each placeholder in angle brackets in `~/.claude/CLAUDE.md`. Back up your settings with `cp ~/.claude/settings.json ~/.claude/settings.json.bak-$(date +%F)` and merge the keys you want from `settings.example.json` into `~/.claude/settings.json`, which also registers the hooks.

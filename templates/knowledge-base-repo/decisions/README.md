@@ -9,5 +9,5 @@ For a single decision outside a repo, use [templates/decision-record.md](../../d
 Keep a one-line index at the bottom of this file:
 
 ```
-- YYYY-MM-DD name - the call in one line - status (open, decided, superseded by <file>)
+- YYYY-MM-DD name - the call in one line - status (open, decided, changed after review, superseded by <file>)
 ```

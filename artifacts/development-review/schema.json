@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Development review starter v1",
+  "title": "Personal development review starter v1",
   "type": "object",
   "additionalProperties": false,
   "required": [

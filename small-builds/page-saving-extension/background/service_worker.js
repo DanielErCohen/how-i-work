@@ -189,11 +189,11 @@ async function handleSavePage(pageContent, tags, note, destinations) {
           let screenshotGitHubPath = null;
           if (hasScreenshot) {
             try {
-              await commitBinaryToGitHub(
+              const savedImg = await commitBinaryToGitHub(
                 githubToken, dest.owner, dest.repo, dest.branch,
                 imgPath, pageContent.screenshotDataUrl, `screenshot: ${articleTitle.slice(0, 60)}`
               );
-              screenshotGitHubPath = imgPath;
+              screenshotGitHubPath = savedImg.path;
             } catch (imgErr) {
               console.error('[Service Worker] Screenshot commit failed:', imgErr.message);
               // Non-fatal - continue saving the article
@@ -205,7 +205,7 @@ async function handleSavePage(pageContent, tags, note, destinations) {
             finalMarkdown += `
 
 ### Screenshot
-![screenshot](../../screenshots/${screenshotGitHubPath.split('/').pop()})`;
+![screenshot](screenshots/${screenshotGitHubPath.split('/').pop()})`;
           }
 
           sendStatus('committing', { message: `Committing to ${dest.label}...` });
@@ -489,7 +489,7 @@ async function handleSaveScreenshot(screenshotDataUrl, tabUrl, tabTitle, tags, n
     const mdFilename = `${today}_screenshot_${titleSlug}.md`;
     const mdPath = `${SAVED_ARTICLES_BASE}/screenshots/${mdFilename}`;
 
-    const buildMarkdown = (withImage) => `---
+    const buildMarkdown = (withImage, imgName = imgFilename) => `---
 date: ${today}
 source_url: ${tabUrl || ''}
 source_type: screenshot
@@ -499,7 +499,7 @@ tags: [${allTags.join(', ')}]
 
 ## ${tabTitle || 'Screenshot'}
 
-${withImage ? `![screenshot](./${imgFilename})` : ''}
+${withImage ? `![screenshot](./${imgName})` : ''}
 ${noteMd ? `
 ### Notes
 ${noteMd}` : ''}`;
@@ -527,7 +527,7 @@ ${noteMd}` : ''}`;
           if (!githubToken)              throw new Error('Check your GitHub token in Settings');
           if (!dest.owner || !dest.repo) throw new Error('Missing owner/repo');
 
-          await commitBinaryToGitHub(
+          const savedImg = await commitBinaryToGitHub(
             githubToken, dest.owner, dest.repo, dest.branch,
             imgPath, screenshotDataUrl, `screenshot: ${(tabTitle || 'screenshot').slice(0, 60)}`
           );
@@ -535,7 +535,7 @@ ${noteMd}` : ''}`;
           sendStatus('committing', { message: `Committing to ${dest.label}...` });
           const githubUrl = await commitToGitHub(
             githubToken, dest.owner, dest.repo, dest.branch,
-            mdPath, buildMarkdown(true), tabTitle || 'Screenshot'
+            mdPath, buildMarkdown(true, savedImg.path.split('/').pop()), tabTitle || 'Screenshot'
           );
           results.push({ kind: 'github', label: dest.label, status: 'saved', url: githubUrl });
         }
@@ -567,13 +567,14 @@ async function commitBinaryToGitHub(token, owner, repo, branch, filePath, dataUr
   const base64 = dataUrl.split(',')[1];
   if (!base64) throw new Error('Invalid screenshot data URL');
 
+  // Returns the path the image was saved under: the "-2" name when the first name was taken.
   const result = await putFile(token, owner, repo, branch, filePath, base64, commitMessage);
-  if (result.ok) return result.url;
+  if (result.ok) return { url: result.url, path: filePath };
 
   if (result.status === 409 || result.status === 422) {
     const filePath2 = filePath.replace('.png', '-2.png');
     const result2 = await putFile(token, owner, repo, branch, filePath2, base64, commitMessage);
-    if (result2.ok) return result2.url;
+    if (result2.ok) return { url: result2.url, path: filePath2 };
     throw new Error(`GitHub conflict on image commit (${result2.status})`);
   }
 
@@ -619,8 +620,13 @@ async function putFile(token, owner, repo, branch, path, encodedContent, message
   return { ok: response.ok, status: response.status, url: htmlUrl, body };
 }
 
+// File-name slug: ASCII letters, digits and hyphens. Accents are stripped first, so "Über uns" gives
+// "uber-uns". A title with no Latin letters or digits (Hebrew, Japanese) would give an empty slug and
+// the same file name for every page that day, so it falls back to a name built from the time.
 function slugify(title) {
-  return title
+  const slug = (title || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '')
     .trim()
@@ -628,6 +634,7 @@ function slugify(title) {
     .replace(/-+/g, '-')
     .slice(0, 50)
     .replace(/-$/, '');
+  return slug || `page-${new Date().toISOString().slice(11, 19).replace(/:/g, '')}`;
 }
 
 // ── Duplicate detection ───────────────────────────────────────────────────────

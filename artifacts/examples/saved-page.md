@@ -1,6 +1,6 @@
 # Made-up saved-page example
 
-The article, team, quote and URL below are invented for this example. The URL is a placeholder.
+The article, team, quote and URL below are made up for this example. The URL is a placeholder.
 
 ---
 date: 2026-10-12
@@ -13,7 +13,7 @@ tags: [onboarding, activation, checklists]
 ## Why onboarding checklists stall
 
 ### Summary
-A checklist helps when each step is a task the user already wants to do. This invented article proposes shortening the checklist; no measured result is available.
+A checklist helps when each step is a task the user already wants to do. This made-up article proposes shortening the checklist; no measured result is available.
 
 ### Key insights
 - Every step the user did not choose is a place to quit.

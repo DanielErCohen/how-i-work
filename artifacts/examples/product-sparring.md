@@ -1,6 +1,6 @@
 # Test a clearer setting label
 
-Made-up teaching example. The product, participants, observations and counts below were invented for this file.
+Made-up teaching example. The product, participants, observations and counts below were made up for this file.
 
 ## Position
 
@@ -8,7 +8,7 @@ Test the import setting's label before adding a setup checklist. The made-up evi
 
 ## Evidence
 
-In an invented usability session, three of five participants asked what "Bring your workspace" meant. Two of those three found the setting after the facilitator called it "Import a file". This is a small, prompted study; it does not show how often real users encounter the problem.
+In a made-up usability session, three of five participants asked what "Bring your workspace" meant. Two of those three found the setting after the facilitator called it "Import a file". This is a small, prompted study; it does not show how often real users encounter the problem.
 
 ## Strongest counter
 

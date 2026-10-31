@@ -1,6 +1,6 @@
 # Meeting review
 
-Get one review of how you work in meetings, from three months of your own transcripts and backed by your own dated quotes.
+Get one review of how you work in meetings, built from your own transcripts and backed by your own dated quotes.
 
 <details>
 <summary><b>Why it works:</b> Few people read back the transcripts that record how they decide and follow up.</summary>
@@ -18,7 +18,7 @@ This is a Claude skill that reads a folder of your meeting transcripts and retur
 
 The skill reads your transcripts in date order, in batches. It then writes a review of about 3,000 words. It names what you do well and what to change, each backed by 2 or 3 dated quotes of your own words. It covers PM craft (problem framing, use of evidence, decisions made versus deferred, follow-ups closed) and team-lead craft (how you give feedback, delegate, unblock, share airtime and run the meeting). It compares your first month with your last and ends with three things to try next month, each with a count to check it against. It marks anything it infers as inferred. It never scores anyone else.
 
-A short sample of the output follows. Alex and every quote are invented. The full made-up review is in [`sample-output.md`](sample-output.md).
+A short sample of the output follows. Alex and every quote are made up. The full made-up review is in [`sample-output.md`](sample-output.md).
 
 > **Made-up sample.**
 >
@@ -52,7 +52,7 @@ Time: 15 minutes, most of it the export.
 - **Claude Code:** the full version. It reads the folder, runs subagents for the batches and saves the review as a file.
 - **Claude app (desktop and web):** download [meeting-review.zip](https://danielercohen.github.io/ai-pm/downloads/meeting-review.zip). Uploading a custom skill needs a paid Claude plan. Open Customize, then Skills, select "+", then "Create skill", then "Upload a skill", and choose the zip. Code execution must be on (Settings, then Capabilities; it is on by default, and on Team and Enterprise plans an admin turns it on). Then attach your transcripts in a chat. There are no subagents, so Claude reads the batches itself. A chat holds a limited amount of text, so the number of transcripts that fit depends on their length. When Claude says the files do not fit, run one chat per month, ask each for its batch notes, and bring the notes to a last chat for the review.
 
-The ready zip is on the site: https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html. To build it yourself, run `bash tools/build-skill-zips.sh` in the [ai-pm](https://github.com/DanielErCohen/ai-pm) repo. A plain `zip` of the folder does not work, because the Claude app rejects some frontmatter keys that the script removes.
+The ready zip is on the site: https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html. To build it yourself, run `bash tools/build-skill-zips.sh` in the [ai-pm](https://github.com/DanielErCohen/ai-pm) repo. Clone ai-pm, how-i-work and cv-tailor into the same folder first, because the script reads the other two as sibling folders. A plain `zip` of the folder does not work, because the Claude app rejects some frontmatter keys that the script removes.
 
 ## Privacy
 

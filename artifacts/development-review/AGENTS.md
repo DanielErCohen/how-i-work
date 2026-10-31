@@ -1,4 +1,4 @@
-# Create or adapt a development review
+# Create or adapt a personal development review
 
 Read `README.md`, `schema.json`, `blank-data.json`, `sample-data.json`, `adaptation-prompt.txt` and `validation-checklist.md` before editing. Keep the four tabs in order: Last week, Assessment today, Improvement roadmap, Professional achievements.
 

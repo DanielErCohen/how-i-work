@@ -126,6 +126,8 @@ Files go to `00-inbox/` in each repo, with the category in the note's frontmatte
 | YouTube video | `yt_` | `yt_2026-05-13_video-title.md` |
 | Website / Tool | `tool_` | `tool_2026-05-13_linear-project-mgmt.md` |
 
+The name comes from the page title with accents removed ("Café" gives `cafe`). A title with no Latin letters or digits, such as Hebrew or Japanese, gets `page-` and the save time in UTC (HHMMSS) instead: `2026-05-13_page-143022.md`. A screenshot is saved in `00-inbox/screenshots/` and linked from the note as `screenshots/<name>.png`.
+
 ### Notion
 
 Pages appear in your "Saved Articles" database with:

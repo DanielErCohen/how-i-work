@@ -27,7 +27,7 @@ Build segment personas from the segment definition in the user's own notes, with
 
 ## 2. Spawn the panel
 
-Start one subagent per role in a single message, at most four at a time, and run extra roles in a second batch. Keep the readers read-only: use the `panelist` agent from `claude/agents/panelist.md` (tools: Read, Grep and Glob), or any custom agent with only those tools. The brief also tells each reader not to edit. Use a fast model by default, for example Haiku. Use a stronger model when the read is high-stakes, such as a CV for a role the user wants or a doc that decides a budget.
+Start one subagent per role in a single message, at most four at a time, and run extra roles in a second batch. Keep the readers read-only: use the `panelist` agent (the copy in `~/.claude/agents/panelist.md`; tools: Read, Grep and Glob), or any custom agent with only those tools. The brief also tells each reader not to edit. Use Sonnet by default (the `panelist` agent is set to it). Use Haiku only for a quick draft. To use another model, pass `model` when you spawn the agent. Use a stronger model when the read is high-stakes, such as a CV for a role the user wants or a doc that decides a budget.
 
 Brief each subagent with this template, filled in per role:
 
@@ -74,14 +74,14 @@ For a product you test again and again, save each persona as a file, for example
 - The output is a simulation. Real users, real demand and real hiring outcomes need real people. Label panel findings as simulated wherever you quote them.
 - Check every factual claim a panelist makes before you act on it. Subagents state wrong facts with confidence.
 - Panelists share a model, so they share blind spots. Their agreement is a weaker signal than two real readers agreeing.
-- Paste only what the user's employer allows. Remove names and customer details from the draft first.
+- Paste only what the user's employer allows. Removing names does not make a draft anonymous: a role, a date or an amount can still point to a person or a customer.
 - Never send the draft, or anything from it, to a real person on the user's behalf. Sending stays with the user.
 
-Prompts to copy are at https://danielercohen.github.io/ai-pm/principles/.
+The same prompts, ready to copy, are on https://danielercohen.github.io/ai-pm/toolkit/skills.html.
 
 ## Without subagents (a chat in the Claude app)
 
-Run each role in its own new chat, so the roles do not influence each other. Fill in this single-reader brief once per role and paste it with the draft:
+Run each role in its own new chat, so the roles do not influence each other. Fill in this one-chat-per-reader brief once per role and paste it with the draft:
 
 ```
 You are <role: for example the finance lead who approves the budget>. You must <what they decide or do with this doc>. You already know <their context>. You have <their patience, for example two minutes>. You say no when <their reasons>.

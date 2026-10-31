@@ -36,6 +36,14 @@
       "Bash(git push --force-with-lease*)",
       "Bash(git reset --hard)",
       "Bash(git reset --hard *)",
+      "Bash(git clean -f*)",
+      "Bash(git checkout .)",
+      "Bash(git checkout -- .)",
+      "Bash(git restore .)",
+      "Bash(git push --delete *)",
+      "Bash(git push * --delete *)",
+      "Bash(git push * :*)",
+      "Bash(git branch -D *)",
       "Bash(curl * | bash *)",
       "Bash(curl * | bash)",
       "Bash(curl * | sh *)",
@@ -48,6 +56,9 @@
       "Read(~/.config/gh/**)",
       "Read(~/.npmrc)",
       "Read(~/.netrc)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.git-credentials)",
       "Read(//**/*.pem)",
       "Read(//**/.env*)"
     ],
@@ -85,7 +96,7 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "Write|Edit",
+        "matcher": "^(Write|Edit|mcp__.*__create_draft)$",
         "hooks": [
           {
             "type": "command",

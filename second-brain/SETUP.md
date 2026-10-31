@@ -9,7 +9,7 @@ Adapt the scaffold to you after the first setup: see [Make it yours](../README.m
 - `git`
 - A text editor that opens a folder of markdown files
 - Claude Code, for the commands, the skill, the hook and the memory setting. The scaffold works
-  without it. You lose `/init`, `/capture`, `/weekly-review`, `/archive-sweep` and `log-entry`, and
+  without it. You lose `/brief`, `/capture`, `/weekly-review`, `/archive-sweep` and `log-entry`, and
   keep every file.
 - Optional: Obsidian or a similar viewer pointed at the folder, for reading
 
@@ -26,13 +26,15 @@ Adapt the scaffold to you after the first setup: see [Make it yours](../README.m
   cd "$HOME/my-second-brain"
   mv README.md.template README.md
   mv SOUL.md.template SOUL.md
-  git init
+  git init -b main
+  git config user.name >/dev/null || git config user.name "Your Name"
+  git config user.email >/dev/null || git config user.email "you@example.com"
   git add -A
   git commit -m "Initial second brain"
 )
 ```
 
-Set your git name and email if you have not. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
+The block sets a git name and email for this repo only when you have none, so the first commit works. If it used the placeholders, run `git config user.name "Your Name"` and `git config user.email you@example.com` with your own values and `git commit --amend --reset-author --no-edit` before you push. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
 
 **Minutes 2 to 4: fill in `.claude/CLAUDE.md`.** Replace the two language placeholders. Then read the
 section "Do not enumerate active work in this file" and the section "Two rules for every file". Keep
@@ -48,7 +50,7 @@ the file short, under about 150 lines, because every line loads in every session
 cd ~/my-second-brain && claude
 ```
 
-Run `/init`. An empty vault reports almost nothing, and that is the right answer. The brief gets
+Run `/brief`. An empty vault reports almost nothing. That is the right answer. The brief gets
 useful in week two.
 
 **Minutes 8 to 10: capture and file three notes.** Drop three loose markdown files into
@@ -131,4 +133,4 @@ ls -a                      # .claude/ .gitignore 00-inbox/ ... 04-archive/ memor
 git grep -c . -- .claude/CLAUDE.md   # exists and is non-empty
 ```
 
-In Claude Code, `/init` should run and report the empty state without errors.
+In Claude Code, `/brief` should run and report the empty state without errors.

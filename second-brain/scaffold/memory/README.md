@@ -42,5 +42,5 @@ because it loads in every session.
 
 ## Example
 
-[`feedback-confirm-before-filing.md`](feedback-confirm-before-filing.md) is invented. Delete it when
+[`feedback-confirm-before-filing.md`](feedback-confirm-before-filing.md) is made up. Delete it when
 you save your first real memory.

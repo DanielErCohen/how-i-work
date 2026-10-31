@@ -12,10 +12,10 @@ This is the checkpoint. A choice that changes what we build gets a one-page deci
 
 ## What I do
 
-- Write a decision record: the call, the evidence, the strongest counter, the kill test, the review date.
+- Write a decision record: the call, the evidence, the strongest counter, the test and decision rule, what would make it wrong, the review date, the review result.
 - Keep an open-questions queue. Every question carries a default, so work continues while the question waits.
 - Keep a short list of beliefs, each with a "wrong if" threshold I can check.
-- Write the kill test before the spend, with a number and a date.
+- Write the test and decision rule before the spend, with a number and a date.
 - Before the record goes out, run a recipient panel (stakeholder preset) on it with [`skills/recipient-panel`](../skills/recipient-panel/SKILL.md): the sponsor who decides, the engineering lead, finance or legal, and the team that will do the work, each as a role.
 
 ## The artifact
@@ -36,4 +36,4 @@ Claude drafts the record from the discussion and finds the strongest counter wit
 ## Example
 
 - Wellness Coach: six beliefs, each with a "wrong if" threshold. The product stops if, at the 6- or 12-month check, target users do not open it daily or no friend keeps using it.
-- Sparktale: I wrote a kill test before spending.
+- Sparktale: I wrote a kill line before spending.

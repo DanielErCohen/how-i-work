@@ -36,7 +36,7 @@ SOFTWARE.
 
 ## small-builds/page-saving-extension/lib/readability.js
 
-Readability.js, by Arc90 Inc and the Mozilla contributors, licensed under the Apache License, Version 2.0. Full text: https://www.apache.org/licenses/LICENSE-2.0
+Readability.js, by Arc90 Inc and the Mozilla contributors, licensed under the Apache License, Version 2.0. The full license text is in [`small-builds/page-saving-extension/lib/LICENSE-APACHE-2.0.txt`](small-builds/page-saving-extension/lib/LICENSE-APACHE-2.0.txt) and must accompany copies of `readability.js`.
 
 The file's own header reads:
 

@@ -7,7 +7,7 @@ A git-backed folder of markdown that Claude reads at every session start, files 
 
 - My second brain started in Notion, separate from the AI chats I worked in.
 - Projects in ChatGPT and Claude let me share saved information between chats. I still copied context in by hand.
-- After some months of coding, I moved it to markdown in git (Apr '26). Claude maps, stores and retrieves my notes with a single prompt.
+- After some months of coding, I moved it to markdown in git (Apr '26). Claude files each new note in the right folder and finds it again when I ask.
 - Git gives search, history and a diff for every change Claude makes.
 - A weekly sweep archives what is done, because notes pile up and nothing removes them by default.
 
@@ -30,13 +30,13 @@ Inside `scaffold/`:
 
 | Path | What it is |
 |------|------------|
-| `00-inbox/` to `04-archive/` | The five PARA folders. |
+| `00-inbox/` to `04-archive/` | The inbox plus the four PARA folders. |
 | `02-areas/areas.md`, `03-resources/resources.md` | The navigation indexes. |
 | `03-resources/registry.md` | The spelling of names that dictation gets wrong. |
-| `memory/` | Claude's one-fact memory notes, an index and the format. |
+| `memory/` | Claude's one-fact memory notes and an index. The format is defined in [`claude/memory/README.md`](../claude/memory/README.md). |
 | `routines/` | The pattern for prompts that run on a schedule. |
 | `.claude/CLAUDE.md` | Assistant instructions: structure and conventions only. |
-| `.claude/commands/` | `/init`, `/capture`, `/weekly-review`, `/archive-sweep`. |
+| `.claude/commands/` | `/brief`, `/capture`, `/weekly-review`, `/archive-sweep`. |
 | `.claude/skills/log-entry/` | Append a row to a log, with units in the column names. |
 | `note-templates/` | `project`, `area`, `decision`, `source`, `daily`. |
 | `README.md.template`, `SOUL.md.template` | Your repo's front page and an optional voice file. |
@@ -52,13 +52,15 @@ Inside `scaffold/`:
   cd "$HOME/my-second-brain"
   mv README.md.template README.md
   mv SOUL.md.template SOUL.md
-  git init
+  git init -b main
+  git config user.name >/dev/null || git config user.name "Your Name"
+  git config user.email >/dev/null || git config user.email "you@example.com"
   git add -A
   git commit -m "Initial second brain"
 )
 ```
 
-Set your git name and email if you have not. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
+The block sets a git name and email for this repo only when you have none, so the first commit works. If it used the placeholders, run `git config user.name "Your Name"` and `git config user.email you@example.com` with your own values and `git commit --amend --reset-author --no-edit` before you push. The command stops if `~/my-second-brain` already exists. Open that folder to resume an existing vault.
 
 [`SETUP.md`](SETUP.md) walks the rest in 10 minutes. Make the repository private before the first
 push, and read [`REDACTION.md`](REDACTION.md) before you consider anything else.

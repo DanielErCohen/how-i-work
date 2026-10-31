@@ -93,7 +93,7 @@ If you want to publish part of the repo, do not sanitize the repo. **Build a sep
 1. Start a new repository. Never remove content from the real one and push it, because history keeps
    everything you removed.
 2. Copy in only the specific files you intend to share.
-3. Rewrite them, rather than redacting them. Replace real examples with invented ones. A note with
+3. Rewrite them, rather than redacting them. Replace real examples with made-up ones. A note with
    twelve `[REDACTED]` markers is unreadable and still leaks structure, since you can usually infer what
    was removed.
 4. Have the assistant read the result cold and report anything identifying. Give it the category table

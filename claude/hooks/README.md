@@ -8,7 +8,7 @@ Fast-forward your notes repo at session start. Set `NOTES_REPO` or edit the defa
 
 ## slop-check-hook.sh (PostToolUse)
 
-Runs [`../scripts/slop-check.sh`](../scripts/slop-check.sh) on markdown and HTML files Claude writes or edits. On an edit it checks only the added text. Exit 2 hands the hits to Claude, which fixes each or justifies it in one line. It needs `jq`. It skips `SOUL.md`, folders whose name ends in `archive` (such as `04-archive`) and folders whose name ends in `memory`. Edit the `case` list to skip other folders where the banned patterns are the point.
+Runs [`../scripts/slop-check.sh`](../scripts/slop-check.sh) on markdown and HTML files Claude writes or edits, and on the body of an email draft created through a connector (`mcp__<server>__create_draft`). The matcher in `settings.example.json` is `^(Write|Edit|mcp__.*__create_draft)$`; a matcher with only letters, digits and `|` is an exact list of tool names, and this one has more characters, so Claude Code reads it as a regular expression. On an edit it checks only the added text. Any em-dash is a hit, matching the "No em-dashes" line in `CLAUDE.template.md`. Exit 2 hands the hits to Claude, which fixes each or justifies it in one line. It needs `jq`. It skips `SOUL.md`, folders whose name ends in `archive` (such as `04-archive`) and folders whose name ends in `memory`. Edit the `case` list to skip other folders where the banned patterns are the point.
 
 ## rtk-rewrite.sh (PreToolUse, optional)
 

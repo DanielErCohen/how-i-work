@@ -23,7 +23,7 @@ The merged PR, the closed issue, and a release note.
 
 ## What AI changes here
 
-The orchestrator checks CI, the review result and the PR template, then merges a PR that meets the rule. It reports what merged in a few lines. The recipient panel (product preset) flags a release note line that a simulated user would misread, before the note goes out.
+The orchestrator checks CI, the review result and the PR template, then reports a PR that meets the rule and waits for my approval to merge. After I approve, it reports what merged in a few lines. The recipient panel (product preset) flags a release note line that a simulated user would misread, before the note goes out.
 
 ## Where I still check
 

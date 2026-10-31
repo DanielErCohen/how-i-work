@@ -1,4 +1,4 @@
-# Development review starter
+# Personal development review starter
 
 A local teaching starter for one personal review. No accounts, dependencies or installation. Compatible with modern desktop and mobile browsers that support local file selection. For routine editing, use a computer with a plain text editor. No skill is required.
 
