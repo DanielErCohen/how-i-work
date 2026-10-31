@@ -4,7 +4,7 @@ Made-up teaching example. The product, participants, observations and counts bel
 
 ## Position
 
-Test the import setting's label before adding a setup checklist. The fictional evidence points to a naming problem.
+Test the import setting's label before adding a setup checklist. The made-up evidence points to a naming problem.
 
 ## Evidence
 
@@ -16,7 +16,7 @@ The label may explain only the first obstacle. Participants could find the setti
 
 ## Test
 
-Give six new fictional participants the same sample file and ask them to import it without help. Three see the current label; three see "Import a file". Record whether each person finds the setting and completes the import. Keep the new label in the next prototype only if all three find it and finish without help while fewer than three do with the current label. Otherwise, inspect where they stop before choosing the next change.
+Give six new made-up participants the same sample file and ask them to import it without help. Three see the current label; three see "Import a file". Record whether each person finds the setting and completes the import. Keep the new label in the next prototype only if all three find it and finish without help while fewer than three do with the current label. Otherwise, inspect where they stop before choosing the next change.
 
 ## Decision
 

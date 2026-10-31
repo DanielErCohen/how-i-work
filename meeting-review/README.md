@@ -18,7 +18,7 @@ This is a Claude skill that reads a folder of your meeting transcripts and retur
 
 The skill reads your transcripts in date order, in batches. It then writes a review of about 3,000 words. It names what you do well and what to change, each backed by 2 or 3 dated quotes of your own words. It covers PM craft (problem framing, use of evidence, decisions made versus deferred, follow-ups closed) and team-lead craft (how you give feedback, delegate, unblock, share airtime and run the meeting). It compares your first month with your last and ends with three things to try next month, each with a count to check it against. It marks anything it infers as inferred. It never scores anyone else.
 
-A short sample of the output follows. Alex and every quote are invented. The full fictional review is in [`sample-output.md`](sample-output.md).
+A short sample of the output follows. Alex and every quote are invented. The full made-up review is in [`sample-output.md`](sample-output.md).
 
 > **Made-up sample.**
 >
