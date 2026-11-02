@@ -3,7 +3,7 @@
 Get one review of how you work in meetings, built from your own transcripts and backed by your own dated quotes.
 
 <details>
-<summary><b>Why it works:</b> Few people read back the transcripts that record how they decide and follow up.</summary>
+<summary><b>Why I built it:</b> I wanted to extract every important piece of information from my meetings.</summary>
 
 - It counts decisions made versus deferred and follow-ups closed.
 - Every finding quotes your own words, with a date.

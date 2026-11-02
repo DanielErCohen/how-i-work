@@ -72,6 +72,8 @@ Pick any provider; the extension talks to it directly with your key.
 | OpenAI | platform.openai.com/api-keys | set the model yourself |
 | Custom | any OpenAI-compatible endpoint, including local Ollama | set URL and model yourself |
 
+Each extraction costs about 1 to 5 US cents of API credit, depending on the model. A low-cost model such as Claude Haiku or OpenAI's Luna is enough.
+
 Model IDs change often. Treat the default as a starting point and use **Test model** in Settings to confirm it works. Chrome asks once for permission to reach the provider's host when you save or test.
 
 ### 5. Add everything to extension settings
