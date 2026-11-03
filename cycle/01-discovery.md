@@ -4,7 +4,7 @@ Whose problem are we trying to solve, and what do they do today?
 
 | Part | Practice |
 |---|---|
-| What AI changes here | I use AI to gather sources, compare alternatives and challenge the problem statement. |
+| What AI changes here | I use AI to find sources, compare alternatives and test the problem statement. |
 | What I check | I check the sources behind claims that affect the decision. Desk research identifies questions to investigate; interviews and observed behavior test them. |
 | Useful output | A short problem statement, current alternatives and open questions. |
 
