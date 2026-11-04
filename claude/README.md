@@ -5,7 +5,7 @@ Four rules and a setup you can copy: a global CLAUDE.md, settings, hooks, three 
 <details>
 <summary><b>Why I built it:</b> My rules grew until Claude skipped some of them, so I rebuilt the setup from a blank page.</summary>
 
-- The instructions loaded at every session start dropped from about 11,100 to about 1,800 tokens (Sep '26).
+- The instructions I wrote that load at every session start dropped from about 11,100 to about 1,800 tokens (Sep '26).
 - Before the rebuild, some rules contradicted each other.
 - I clicked through permission prompts for routine reads and edits.
 - A rule now stays only if it answers a failure I saw twice.
@@ -36,7 +36,7 @@ Start with the map, then send the next research or review task to a subagent.
 
 ## Why each part exists
 
-**Global `CLAUDE.md`.** It holds who I am, how to talk to me, the evidence rules and the autonomy rules. The rebuild in Sep '26 cut the instructions loaded at every session start from about 11,100 to about 1,800 tokens. A rule earns its place after a failure I saw twice that no setting, hook or permission can prevent. It is written as a positive description in at most two lines, and the commit names the failure.
+**Global `CLAUDE.md`.** It holds who I am, how to talk to me, the evidence rules and the autonomy rules. The rebuild in Sep '26 cut the instructions I wrote that load at every session start from about 11,100 to about 1,800 tokens. A rule earns its place after a failure I saw twice that no setting, hook or permission can prevent. It is written as a positive description in at most two lines, and the commit names the failure.
 
 **Subagent model default.** Subagents run on the mid model through `CLAUDE_CODE_SUBAGENT_MODEL`, so the strongest model stays in the main session. The built-in Explore agent ignores that variable, so the map says to pass `model: "haiku"` on every Explore call.
 

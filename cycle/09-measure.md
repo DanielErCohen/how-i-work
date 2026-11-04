@@ -5,7 +5,7 @@ Did the change help, and what should we do next?
 | Part | Practice |
 |---|---|
 | What AI changes here | I use AI to pull defined measures, check the inputs and draft a readout against the decision we made. |
-| What I check | I check comparable populations and time windows, then decide what the result supports. An unrun test stays an open question. |
+| What I check | I check comparable populations and time windows, then decide what the result supports. A zero or a never needs a query that could have found the event: I check the event definition, the users included and the date range, and test it on one known occurrence. An unrun test stays an open question. |
 | Useful output | A dated readout and the next decision or research question. |
 
 I read the north star and retention from the product's own logs, then go back to step 1 with what I learned.
