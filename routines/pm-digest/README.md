@@ -46,6 +46,7 @@ Replace this list with newsletters you read. Add each sender's full address to t
 2. Copy `routine-prompt.md` into the folder where you keep your prompts, and replace each placeholder in angle brackets: your address, your label, your timezone and target hour. `cp -n` never overwrites a file you already have:
 
    ```bash
+   [ -d ~/how-i-work ] || git clone https://github.com/DanielErCohen/how-i-work.git ~/how-i-work
    cp -n ~/how-i-work/routines/pm-digest/routine-prompt.md ./my-digest-prompt.md
    ```
 

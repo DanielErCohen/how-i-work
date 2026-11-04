@@ -12,6 +12,7 @@ Adapt the scaffold to you after the first setup: see [Make it yours](../README.m
   without it. You lose `/brief`, `/capture`, `/weekly-review`, `/archive-sweep` and `log-entry`, and
   keep every file.
 - Optional: Obsidian or a similar viewer pointed at the folder, for reading
+- Optional: the GitHub command line (`gh`), signed in once with `gh auth login`, for the one-command private remote
 
 ## The 10-minute path
 
@@ -62,6 +63,8 @@ Make the remote private before the first push:
 ```bash
 gh repo create my-second-brain --private --source=. --push
 ```
+
+Without `gh`, create a private repository on github.com, then run `git remote add origin <url>` and `git push -u origin main`.
 
 Private is the default to keep. A second brain collects addresses, figures, health notes and other
 people's words faster than you will notice. Read [`REDACTION.md`](REDACTION.md) first.

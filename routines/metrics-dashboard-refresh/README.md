@@ -27,6 +27,7 @@ The sample data in this folder is made up. The CSV has no comment lines, because
 ## Run it
 
 ```bash
+[ -d ~/how-i-work ] || git clone https://github.com/DanielErCohen/how-i-work.git ~/how-i-work
 cd ~/how-i-work/routines/metrics-dashboard-refresh
 python3 parse_example.py --input data/sample-open-period.csv --out dist/data.js
 echo $?   # 0 = written, 1 = a check failed and nothing was written

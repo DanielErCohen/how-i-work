@@ -85,7 +85,7 @@ cp -n ~/how-i-work/claude/hooks/*.sh ~/.claude/hooks/
 chmod +x ~/.claude/scripts/slop-check.sh ~/.claude/hooks/notes-repo-pull.sh ~/.claude/hooks/slop-check-hook.sh
 ```
 
-Then replace each placeholder in angle brackets in `~/.claude/CLAUDE.md`. Back up your settings with `cp ~/.claude/settings.json ~/.claude/settings.json.bak-$(date +%F)` and merge the keys you want from `settings.example.json` into `~/.claude/settings.json`, which also registers the hooks.
+Then replace each placeholder in angle brackets in `~/.claude/CLAUDE.md`. No settings file yet: copy the example with `cp -n ~/how-i-work/claude/settings.example.json ~/.claude/settings.json` and edit the paths in it. A settings file exists: back it up with `cp ~/.claude/settings.json ~/.claude/settings.json.bak-$(date +%F)`, then merge the keys you want from `settings.example.json` into it. Either way the example registers the hooks.
 
 Claude app (desktop and web): agents, hooks and settings need Claude Code. The skills in [`../skills/`](../skills) install as zip uploads.
 

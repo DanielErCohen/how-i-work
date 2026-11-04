@@ -19,7 +19,7 @@ Before the first user, I decide what I will measure and where the number comes f
 
 ## The artifact
 
-`analytics/event-catalogue.md`, `analytics/north-star.md` in the knowledge base. `docs/qa/instrumentation.md` in the code repo, because it goes stale when the code changes.
+`analytics/event-catalog.md`, `analytics/north-star.md` in the knowledge base. `docs/qa/instrumentation.md` in the code repo, because it goes stale when the code changes.
 
 ## What AI changes here
 

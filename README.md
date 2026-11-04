@@ -66,7 +66,7 @@ cp -Rn ~/how-i-work/skills/recipient-panel ~/how-i-work/skills/product-sparring 
 cp -n ~/how-i-work/claude/agents/*.md ~/.claude/agents/
 ```
 
-**Claude app (desktop and web).** Download the skill as a zip from https://danielercohen.github.io/ai-pm/downloads/<name>.zip.
+**Claude app (desktop and web).** Download the skill as a zip from `https://danielercohen.github.io/ai-pm/downloads/<name>.zip`.
 
 - The zips: [recipient-panel](https://danielercohen.github.io/ai-pm/downloads/recipient-panel.zip), [product-sparring](https://danielercohen.github.io/ai-pm/downloads/product-sparring.zip), [voice](https://danielercohen.github.io/ai-pm/downloads/voice.zip) and [meeting-review](https://danielercohen.github.io/ai-pm/downloads/meeting-review.zip).
 - In the app open Customize, then Skills, select "+", then "Create skill", then "Upload a skill", and choose the zip.
