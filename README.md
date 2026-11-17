@@ -4,7 +4,7 @@ Product management tools I built and use, free to share and adapt.
 
 - Each tool has a page on the site with what it fixes, why I built it and how to set it up: https://danielercohen.github.io/ai-pm/toolkit/.
 - The repo holds tools for Claude Code and the Claude app, plus a nine-step workflow.
-- Every tool has a folder here except cv-tailor and Project start, which have their own repos.
+- Every tool has a folder here except cv-tailor, Project start and Work task board, which have their own repos.
 - AI widens what you look at and argues with your draft. You frame the problem, decide and sign off.
 - Each tool works best adapted to you: [Make it yours](#make-it-yours) has a prompt for your AI.
 
@@ -17,6 +17,7 @@ Product management tools I built and use, free to share and adapt.
 | [Skills](https://danielercohen.github.io/ai-pm/toolkit/skills.html) | Four skills: challenge a plan, test a doc on simulated readers, turn a bug into an issue an engineer can start on, draft in your own voice. | 2 minutes per skill, voice about 20 minutes | [`skills/`](skills) |
 | [Meeting review](https://danielercohen.github.io/ai-pm/toolkit/meeting-review.html) | Find the habits to change in how you run meetings, from your own transcripts. | 15 minutes | [`meeting-review/`](meeting-review/README.md) |
 | [Routines](https://danielercohen.github.io/ai-pm/toolkit/routines.html) | Get your PM newsletters as one 4-minute digest, twice a week. Run it by hand in the Claude app first. | 30 to 45 minutes each | [`routines/`](routines) |
+| [Work task board](https://danielercohen.github.io/ai-pm/toolkit/work-task-board.html) | Claude reads your meeting notes, mail and chat, prepares each decision as a card and waits for your yes before anything is sent. | Not timed yet | [work-task-board repo](https://github.com/DanielErCohen/work-task-board) |
 | [Second brain](https://danielercohen.github.io/ai-pm/toolkit/second-brain.html) | Give Claude your context at every session start, so you stop repeating it. | 10 minutes | [`second-brain/`](second-brain/README.md) |
 | [Page-saving extension](https://danielercohen.github.io/ai-pm/toolkit/small-builds.html) | Save the pages and podcasts worth keeping to your notes in one click. | 15 to 20 minutes | [`small-builds/`](small-builds/README.md) |
 | [cv-tailor](https://danielercohen.github.io/ai-pm/toolkit/cv-tailor.html) | Improve your CV so it gets read, then tailor it to each role to get more callbacks. | 15 minutes | [cv-tailor repo](https://github.com/DanielErCohen/cv-tailor) |

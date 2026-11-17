@@ -22,7 +22,7 @@ An issue per piece of work and a pull request per issue, using the [PR template]
 
 ## What AI changes here
 
-A mid-tier model writes the code. The orchestrator, on the strongest model, plans, splits the lanes and reads the results. Recon runs on the fastest model.
+A mid-tier model writes the code. The orchestrator, on the strongest model, plans, splits the lanes and reads the results. Recon runs on the fastest model. The [work task board](https://danielercohen.github.io/ai-pm/toolkit/work-task-board.html) keeps open questions as cards, each prepared before it reaches me.
 
 ## Where I still check
 

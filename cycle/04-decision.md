@@ -24,7 +24,7 @@ This is the checkpoint. A choice that changes what we build gets a one-page deci
 
 ## What AI changes here
 
-Claude drafts the record from the discussion and finds the strongest counter with the [`product-sparring`](../skills/product-sparring/SKILL.md) skill. A separate `red-team` agent challenges the plan with no stake in it. The panel then reads the finished record as its readers will and reports where each stops reading and what would make each say yes.
+Claude drafts the record from the discussion and finds the strongest counter with the [`product-sparring`](../skills/product-sparring/SKILL.md) skill. A separate `red-team` agent challenges the plan with no stake in it. The panel then reads the finished record as its readers will and reports where each stops reading and what would make each say yes. The [work task board](https://danielercohen.github.io/ai-pm/toolkit/work-task-board.html) prepares each decision as a card with one recommendation and waits for my yes.
 
 ## Where I still check
 
