@@ -14,7 +14,7 @@ A skill that writes in your voice, and the method for building the voice file fr
 3. **Write the rules in command voice.** "Direct. No hedging." works better than "I tend to prefer directness." A command survives a long session and a description fades.
 4. **Add the bans.** List what you never write: stiff sign-offs, filler openers, constructions that read as machine-written. Explicit bans hold up.
 5. **Write a self-check.** A short checklist at the end of the file. Claude runs it before returning a draft.
-6. **Wire in the slop hook.** The [slop checker](../../claude/scripts/slop-check.sh) and its [hook](../../claude/hooks/slop-check-hook.sh) catch what the voice file misses. Where a flag hits wording that is yours, keep it.
+6. **Wire in the slop hook (Claude Code only).** The [slop checker](https://github.com/DanielErCohen/how-i-work/blob/main/claude/scripts/slop-check.sh) and its [hook](https://github.com/DanielErCohen/how-i-work/blob/main/claude/hooks/slop-check-hook.sh) catch what the voice file misses. Where a flag hits wording that is yours, keep it.
 7. **Test on real mail.** Ask for a reply to an old email you answered yourself. Compare. Fix the rule behind each difference.
 8. **Mark evidence.** Note which rules come from real samples and which are defaults you have not checked. Review the file after a month of use.
 
@@ -24,7 +24,7 @@ Your voice file is built from your private writing. Keep it in a private repo an
 
 ## Install
 
-Adapt the skill to you after installing: see [Make it yours](../../README.md#make-it-yours).
+Adapt the skill to you after installing: see [Make it yours](https://github.com/DanielErCohen/how-i-work/blob/main/README.md#make-it-yours).
 
 **Claude Code.** This block copies the folder, then the template as your voice file. `cp -n` never overwrites a file you already have, so a `SOUL.md` you filled in stays as it is. Fill in `SOUL.md` after the copy.
 

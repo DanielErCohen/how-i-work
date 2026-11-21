@@ -43,7 +43,7 @@ Replace this list with newsletters you read. Add each sender's full address to t
 ## Setup
 
 1. Subscribe to the newsletters. Create a Gmail label and a filter that applies it to your newsletters.
-2. Copy `routine-prompt.md` into the folder where you keep your prompts, and replace each placeholder in angle brackets: your address, your label, your timezone and target hour. `cp -n` never overwrites a file you already have:
+2. Copy `routine-prompt.md` into the folder where you keep your prompts, and replace these values: `<your IANA timezone>`, `<target hour>`, `<your address>` (three places), `<your newsletter label>`, `<your focus areas>` and the three example sender addresses in the `from:` query in section 2. The other angle-bracket items, such as `<n>`, `<topic>` and `<D Mon>`, are filled in by Claude at run time: leave them as they are. `cp -n` never overwrites a file you already have:
 
    ```bash
    [ -d ~/how-i-work ] || git clone https://github.com/DanielErCohen/how-i-work.git ~/how-i-work
@@ -51,7 +51,7 @@ Replace this list with newsletters you read. Add each sender's full address to t
    ```
 
 3. Create a scheduled routine at [claude.ai/code/routines](https://claude.ai/code/routines), or with `/schedule` in Claude Code. Enable the Gmail connector and WebFetch, and paste the prompt. Schedule it two slots one hour apart in UTC if your timezone has daylight saving, as the time gate in the prompt expects.
-4. Run it once by hand and read the result. When the output is wrong, fix the prompt.
+4. Run it once by hand and read the result. To try it first, start the run with the words "trial run": the digest comes back in the chat, nothing is sent and nothing in Gmail changes. When the output is wrong, fix the prompt.
 
 ## Why it works this way
 

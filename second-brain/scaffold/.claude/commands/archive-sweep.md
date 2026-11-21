@@ -20,7 +20,7 @@ That gives last-commit date, file count, and path per directory.
 
 | Signal | Reading |
 |--------|---------|
-| Project, no commit in 30–90 days | Ask whether it shipped. If yes, archive. |
+| Project, no commit in 30 to 90 days | Ask whether it shipped. If yes, archive. |
 | Project, no commit in 90+ days | Archive by default. The project needs a reason to stay. |
 | Project with a goal that is now met | Archive regardless of recency. |
 | Area, no commit in 180+ days, 5+ files | Dormant responsibility. Archive or admit it is not an area. |

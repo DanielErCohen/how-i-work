@@ -8,6 +8,10 @@
 # Set NOTES_REPO to the path of your notes repo, or edit the default below.
 repo="${NOTES_REPO:-$HOME/notes}"
 [ -d "$repo/.git" ] || exit 0
+if [ -z "$(git -C "$repo" remote)" ]; then
+  printf 'notes-repo-pull: %s has no remote yet, nothing to pull\n' "$repo" >&2
+  exit 2
+fi
 out=$(GIT_TERMINAL_PROMPT=0 git -C "$repo" pull --ff-only -q 2>&1 >/dev/null)
 rc=$?
 [ "$rc" -eq 0 ] && exit 0

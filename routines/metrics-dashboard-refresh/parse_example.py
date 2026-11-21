@@ -53,6 +53,8 @@ def check(rows):
         short = [c for c in REQUIRED if r.get(c) is None]
         if short:
             fail(f"row {i}: no value for {short}; the row has fewer columns than the header")
+        if None in r:
+            fail(f"row {i}: more cells than the header; a value probably contains a comma, so quote it")
         try:
             d = date.fromisoformat(r["date"])
             amount = float(r["amount"])

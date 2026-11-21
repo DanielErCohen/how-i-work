@@ -56,7 +56,7 @@ useful in week two.
 
 **Minutes 8 to 10: capture and file three notes.** Drop three loose markdown files into
 `00-inbox/`: a thing you want to remember, a task you owe someone, a link you saved. Run `/capture`.
-Claude proposes a home for each one and leaves any ambiguous item in the inbox. Commit.
+Claude proposes a home for each one and leaves any ambiguous item in the inbox. A note with no clear home stays in the inbox, and that is the right result. Commit.
 
 Make the remote private before the first push:
 

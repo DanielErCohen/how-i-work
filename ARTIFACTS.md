@@ -12,7 +12,7 @@ Use this guide when an assistant turns a toolkit method into a review, document,
 
 ## Preview, download and copy
 
-Use one pattern for toolkit artifact previews: a clearly labeled made-up example, an empty starting state, **Download starter** and **Copy adaptation prompt**. The download includes the editable source, blank data or template, made-up example, adaptation prompt, validation notes and licenses. The copied prompt names the tool, asks for permitted inputs and requests a saved source file with explicit unknowns.
+Use one pattern for toolkit artifact previews: a clearly labeled made-up example, an empty starting state, **Download editable pack** and **Copy adaptation prompt**. The download includes the editable source, blank data or template, made-up example, adaptation prompt, validation notes and licenses. The copied prompt names the tool, asks for permitted inputs and requests a saved source file with explicit unknowns.
 
 Keep preview content separate from private working data. Show empty and invalid states clearly; failed imports retain the previous valid view. Test visible download and copy controls, keyboard operation, narrow screens and 200% zoom. Explain what is saved and where. Add no automatic collection, storage, uploads or exports when adapting a static example. The [personal development review starter](artifacts/development-review/README.md) provides this local import pattern; its [agent guide](artifacts/development-review/AGENTS.md) defines its schema and states.
 

@@ -32,6 +32,7 @@ Title: a short imperative phrase. Body sections, one line where one line is enou
 - Summary: 2-4 lines, leading with the most surprising recon finding.
 - Problem / user need: who, when, how painful, and the signal that shows it.
 - Desired behavior: product-level rules the implementer works against.
+- Bugs only: steps to reproduce, and the actual result against the expected one.
 - Out of scope: what this is not.
 - Feasibility notes: `file:line` pointers to where things live, leaving implementation choices to the engineer; for a value that already exists, write "reconcile with it, do not recompute".
 - Success metric: a concrete signal.
@@ -43,7 +44,7 @@ A non-code prerequisite (an account, infra, a legal sign-off) gets its own short
 ## 5. Present, then create
 - Show the destination `owner/name` on its own line (and whether the repo is public, since anchors and names in the body become world-readable), the full issue body, any near-duplicate, and one line of product challenge: the strongest counter or the thinnest assumption.
 - Pass the repo as a literal `owner/name`: each Bash call is a fresh shell, so a variable set earlier is empty and `gh` falls back to another remote.
-  `gh issue create --repo <owner/name> --title "<title>" --body-file <scratchpad>/issue-body.md`
+  `gh issue create --repo <owner/name> --title "<title>" --body-file <temporary file holding the issue body>`
 - Print the full issue body in chat and wait for an explicit yes. Run `gh issue create` only after it.
 - One issue at a time, waiting for each URL.
 - Report the URL and stop; implementation is a separate step.

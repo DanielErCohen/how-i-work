@@ -6,14 +6,14 @@ pets, businesses. Claude checks dictated text against this file before it files 
 One row per name. Add a row the first time you notice a transcription error, and add the wrong
 spellings you have seen, so the next fix is a lookup.
 
+The four rows below are made-up examples. Delete them and add your own.
+
 | Name | Kind | Notes | Heard as |
 |------|------|-------|----------|
 | Sam Raven | person | friend, `<how you know them>` | Sam Raiven, Sam Rayven |
 | Robin Hale | person | friend | Robyn, Robin Hail |
 | Lakeside Park | place | the park by the river | Lake Side Park, Lakesight Park |
 | Mill Street Bakery | place | Saturday bread | Milestreet Bakery, Mill Street Bakeries |
-
-The rows above are made up. Replace them with your own.
 
 ## Rules
 

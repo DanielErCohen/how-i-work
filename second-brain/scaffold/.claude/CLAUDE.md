@@ -84,7 +84,7 @@ This repo may contain personal material. Rules, in order of priority:
 3. Treat anything about a **third party** (feedback, transcripts, someone else's medical or financial
    detail) as belonging to that person. Keep it out of summaries and shared output unless asked.
 
-See `REDACTION.md` in the template for the full pre-publish checklist.
+See the full pre-publish checklist at https://github.com/DanielErCohen/how-i-work/blob/main/second-brain/REDACTION.md.
 
 ---
 

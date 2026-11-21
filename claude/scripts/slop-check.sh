@@ -22,6 +22,11 @@ else
   export LC_ALL=C
 fi
 
+if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
+  echo "usage: slop-check.sh <draft-file> [more-files...]"
+  exit 0
+fi
+
 if [[ $# -eq 0 ]]; then
   echo "usage: slop-check.sh <draft-file> [more-files...]" >&2
   exit 2

@@ -85,10 +85,18 @@ function renderDestinations(settings) {
     const checked = dest.kind === 'github' ? true : notionDefault;
     const label = document.createElement('label');
     label.className = 'dest-option';
-    label.innerHTML = `
-      <input type="checkbox" value="${dest.id}" ${checked ? 'checked' : ''} />
-      <span class="dest-name">${dest.label}</span>
-      <span class="dest-kind" data-kind="${dest.kind}">${dest.kind}</span>`;
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.value = dest.id;
+    input.checked = checked;
+    const nameEl = document.createElement('span');
+    nameEl.className = 'dest-name';
+    nameEl.textContent = dest.label;
+    const kindEl = document.createElement('span');
+    kindEl.className = 'dest-kind';
+    kindEl.dataset.kind = dest.kind;
+    kindEl.textContent = dest.kind;
+    label.append(input, nameEl, kindEl);
     destinationsListEl.appendChild(label);
   }
 }

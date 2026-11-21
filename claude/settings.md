@@ -1,6 +1,6 @@
 # settings.example.json, key by key
 
-Back up your current file first: `cp ~/.claude/settings.json ~/.claude/settings.json.bak-$(date +%F)`. Then merge the keys you want into `~/.claude/settings.json`. Paths use `~`: replace them with your own.
+Back up your current file first: `cp ~/.claude/settings.json ~/.claude/settings.json.bak-$(date +%F)`. Then merge the keys you want into `~/.claude/settings.json`. Paths use `~`. Two of them are yours to edit: `additionalDirectories` (`~/code`) and `autoMemoryDirectory` (`~/notes/claude-memory`). A notes repo is optional: without one, point `autoMemoryDirectory` at any folder you like or leave the key out.
 
 ## env
 
@@ -15,9 +15,9 @@ Back up your current file first: `cp ~/.claude/settings.json ~/.claude/settings.
 
 | Key | Why |
 |---|---|
-| `allow` | A list for routine tools. Prompts for reads and edits teach you to click through. The example scopes Bash to a few read-only and local git commands such as `Bash(git status)`, `Bash(git diff *)` and `Bash(npm test)`. Edit and Write cover the project folder only (`./**`). Web fetch and web search are left out, so Claude Code asks each time. Add commands as you approve them, and avoid a bare `Bash` entry because it allows every command. |
+| `allow` | A list for routine tools. Prompts for reads and edits teach you to click through. The example scopes Bash to a few local git commands such as `Bash(git status)`, `Bash(git diff *)` and `Bash(npm test)`. Edit and Write cover the project folder only (`./**`). Web fetch and web search are left out, so Claude Code asks each time. Add commands as you approve them, and avoid a bare `Bash` entry because it allows every command. |
 | `deny` | A tripwire for catastrophic commands, force pushes in their common spellings, commands that discard work (`git clean -f`, `git checkout .`, `git restore .`, `git branch -D`), remote branch deletes (`git push --delete`), and reads of credential files: `~/.ssh`, `~/.aws`, `~/.config/gh`, `~/.gnupg`, `~/.kube`, `~/.git-credentials`, `~/.npmrc`, `~/.netrc`, `.pem` keys and `.env` files at any path. It matches command text, so a rephrased command can slip past it. A read deny also blocks edits. `.env.example` is blocked too: keep a copy under another name when Claude needs the shape. |
-| `ask` | Merges, repo deletes, and anything that sends a message. I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them. Anything that touches money, user data, outgoing messages or cannot be undone waits for me. `gh pr merge` stays under `ask` in the example file. The `rtk` twins exist because Claude Code matches rules after the rewrite hook has changed the command. Drop them if you do not use rtk. |
+| `ask` | Merges, repo deletes, and messages sent through the three tool names the example lists: `mcp__*__send_message`, `mcp__*__reply` and `mcp__*__forward`. A connector with other tool names (a chat tool's own send, a calendar invite, a file share) needs its own line. I confirm every change to what the product does and sign off before release. Agents open PRs and a separate review agent checks them. Anything that touches money, user data, outgoing messages or cannot be undone waits for me. `gh pr merge` stays under `ask` in the example file. The `rtk` twins exist because Claude Code matches rules after the rewrite hook has changed the command. Drop them if you do not use rtk. |
 | `additionalDirectories` | Folders Claude may read and write outside the project root. |
 
 ## sandbox

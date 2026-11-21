@@ -1,10 +1,12 @@
 ---
 name: recipient-panel
-description: Before something goes to other people, spawn subagents that play its readers, collect their objections and tighten the draft. Use when the user says "before I send this", "challenge this as the readers", "run a panel", "how will X read this", "walk this flow as personas", "read this release note as users" or "run a recipient panel", or is drafting a doc, CV, application or page for others. For one adversarial review of a plan, use product-sparring or the red-team agent instead.
+description: Before something goes to other people, spawn subagents that play its readers, collect their objections and tighten the draft. Use when the user says "before I send this", "challenge this as the readers", "run a panel", "how will X read this", "walk this flow as personas", "read this release note as users" or "run a recipient panel", or is drafting a doc, CV, application or page for others. For one adversarial review of a plan, use product-sparring or a red-team review instead.
 effort: high
 ---
 
 # Recipient panel
+
+In the Claude app, where no subagents are available, use the "Without subagents" section at the end instead of step 2.
 
 You test a draft against the people who will receive it. Each reader is one subagent that sees the draft cold, as that role, and reports where it stalls. You merge the reports and tighten the draft. The result is a simulation. It shows where a draft is likely to lose a reader and cannot show what real people will do.
 
@@ -60,7 +62,7 @@ For a flow, hand over the steps or screens in order and ask the persona to walk 
 1. Put every objection in one list and count how many roles raised it. Merge objections that differ only in wording.
 2. Fix the objections raised by two or more roles first. Then fix single objections that are cheap and clearly right.
 3. Write one line for each objection you leave out, with the reason.
-4. Edit the draft in the main session, since the panel only reports. Show the changes as before and after lines.
+4. Edit the draft in the main session, since the panel only reports. Show the changes as before and after lines. Where a fix needs a fact the author has not given, write a bracketed placeholder such as [figure] or [date], and never a made-up figure or date.
 5. Report the stop lines and scores per role. Scores compare one round with the next. Do not average them.
 
 A second round is worth running when round one changed more than a few lines. Add at least one fresh subagent that has never seen the earlier version.

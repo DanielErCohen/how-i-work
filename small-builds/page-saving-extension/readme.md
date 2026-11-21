@@ -17,11 +17,13 @@ It saves with one click to one or more GitHub second brains, a Notion database o
 
 ## Setup (15 to 20 minutes)
 
+For the GitHub route, the numbered sections 3, 4 and 5 are required. Sections 1 and 2 are only for Notion.
+
 ### Install the extension
 
 1. Get the repo if you do not have it yet: `git clone https://github.com/DanielErCohen/how-i-work.git`
 2. In Chrome open `chrome://extensions` and switch on **Developer mode** (top right)
-3. Click **Load unpacked** and choose the folder `how-i-work/small-builds/page-saving-extension`
+3. Click **Load unpacked** and choose the folder `how-i-work/small-builds/page-saving-extension`. If you downloaded the editable pack ZIP from the site, unzip it and choose the inner `small-builds/page-saving-extension` folder, the one that holds `manifest.json`
 4. Pin the extension from the puzzle-piece menu so the icon stays visible
 
 ### 1. Create a Notion database (if using Notion)
@@ -79,7 +81,7 @@ Model IDs change often. Treat the default as a starting point and use **Test mod
 ### 5. Add everything to extension settings
 
 1. Click the extension icon in your browser
-2. Click **Settings** in the popup
+2. Click the gear icon at the top right of the popup
 3. Fill in:
    - **AI model**: provider, API key, and model (from step 4). Base URL and API format fill in from the provider; edit them for a custom endpoint
    - **GitHub token, owner, repo** (from step 3) - and optionally more repos under **Additional repositories**
@@ -120,7 +122,7 @@ The extension auto-detects the page type and shows it in the popup:
 
 ### GitHub
 
-Files go to `00-inbox/` in each repo, with the category in the note's frontmatter. Run `/capture` in your second brain to file them.
+Files go to `00-inbox/` in each repo, with the category in the note's frontmatter. Run `/capture` in your second brain to file them. `/capture` is a command from the [second-brain template](../../second-brain/README.md) in this repository.
 
 | Type | Filename prefix | Example |
 |---|---|---|

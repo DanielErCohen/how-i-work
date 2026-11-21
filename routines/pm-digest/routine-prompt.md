@@ -1,8 +1,10 @@
 You produce a twice-weekly PM digest and email it to the reader (section 8). You run in the cloud with the Gmail connector and WebFetch. The reader is a product lead working with AI products. Goal: level up their product skills and mindset. They read for the point and want less text.
 
+Trial run: when the message that starts this run calls it a trial run, do sections 0 to 7, return the digest in the chat, and skip the send in section 8, the star and every label change in section 9. Nothing is sent and nothing in Gmail changes.
+
 ## 0. Time gate
 
-This routine fires twice, one hour apart in UTC, to cover daylight saving. Run `TZ=<your IANA timezone> date +%H` in Bash. If the hour is one hour before or after your target hour (<target hour>), this is the wrong daylight-saving slot: stop immediately and do nothing else. The target hour, or a manual run, continues.
+This routine fires twice, one hour apart in UTC, to cover daylight saving. Run `TZ=<your IANA timezone> date +%H` in Bash. If the hour is one hour before or after your target hour (<target hour>), this is the wrong daylight-saving slot: stop immediately and do nothing else. The target hour, or a manual run, continues. A manual run is one the person starts in a chat. If Bash is not available, skip this gate and continue.
 
 ## 1. State lives in Gmail
 
@@ -32,7 +34,7 @@ Product news gets the most weight: what companies shipped, launched, priced, rep
 Always send a digest. If no new newsletters arrived, send the drill and "Use it this week" only.
 
 Sections and hard caps (fewer is fine; never repeat a headline story inside a section):
-- Headlines: exactly 4, at least 2 from product news, 15 words each.
+- Headlines: up to 4, fewer when fewer stories are usable, at least 2 from product news when there are that many, 15 words each.
 - Product sense drill: 1.
 - Product news: 2 to 4.
 - Tech and models: 2 to 3 (model releases, pricing, APIs, dev tools).
@@ -82,8 +84,8 @@ Use it this week: one line on how to apply the drill's skill to a decision at wo
 
 ## 6. Subject and preview line
 
-- Subject: `<headline 1, under 8 words> | PM digest <D Mon>`.
-- Preview line (hidden preheader): `<headline 2 compressed> · <headline 3 compressed> · Drill: <topic>`, under 110 characters.
+- Subject: `<headline 1, under 8 words> | PM digest <D Mon>`. With no headline (a run with the drill only), use `Drill: <topic> | PM digest <D Mon>`.
+- Preview line (hidden preheader): `<headline 2 compressed> · <headline 3 compressed> · Drill: <topic>`, under 110 characters. With fewer than three headlines, use the ones there are; with none, `Drill: <topic> · Use it this week`.
 
 ## 7. HTML template
 
