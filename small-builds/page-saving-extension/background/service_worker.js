@@ -248,10 +248,14 @@ function fencePageText(text) {
   return `<page_content>\n${clean}\n</page_content>`;
 }
 
-// The model's note never needs a remote image. Strip ![alt](http...) so a page cannot make the
-// saved note load an image from its server. The extension's own screenshot embed is added later.
+// The model's note never needs a remote image. Strip inline images with a remote address, <img> tags
+// and reference-style images, so a page cannot make the saved note load an image from its server.
+// The extension's own screenshot embed is added later.
 function stripRemoteImages(markdown) {
-  return markdown.replace(/!\[[^\]]*\]\(\s*https?:\/\/[^)]*\)/gi, '');
+  return markdown
+    .replace(/!\[[^\]]*\]\(\s*<?(?:https?:)?\/\/[^)]*\)/gi, '')
+    .replace(/<img\b[^>]*>/gi, '')
+    .replace(/!\[(?!\[)[^\]]*\](?!\()(?:\s?\[[^\]]*\])?/g, '');
 }
 
 // ── Prompt dispatcher (provider-agnostic; transport lives in lib/llm.js) ─────────────────────────────────────────────────────────
